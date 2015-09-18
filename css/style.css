@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Comfortaa:400,700,300);
+body {
+  font-family: 'Lato', sans-serif;
+  color: white; }
+
+h1, h2, h3, h4, h5 {
+  color: white; }
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2em;
+  font-weight: 400; }
+
+p {
+  font-size: 1.15em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9); }
+
+.red {
+  color: #ff5555; }
+
+.section {
+  transition: background-color 0.5s ease; }
+  .section h1 {
+    margin-top: 4em;
+    margin-bottom: 1em; }
+  .section p {
+    margin-bottom: 2em; }
+
+.color-one {
+  background: #3590fc; }
+
+.color-two {
+  background: #44a2fc; }
+
+.color-three {
+  background: #55b7fc; }
+
+.color-four {
+  background: #62c7fc; }
+
+.color-five {
+  background: #5bcdec; }
+
+.color-six {
+  background: #5ed2e3; }
+
+.hidden {
+  visibility: hidden; }
+
+ul.nav {
+  list-style-type: none;
+  margin-right: 20px; }
+  ul.nav li {
+    display: inline; }
+  ul.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 300; }
+  ul.nav a:hover, ul.nav a:active {
+    color: #3590fc;
+    background: white;
+    border-radius: 2px; }
+  ul.nav a:visited {
+    color: white; }
+
+header {
+  position: fixed;
+  padding-top: 38px;
+  z-index: 9999999;
+  left: 38px;
+  right: 38px; }
+  header .left {
+    width: 50%; }
+  header .right {
+    text-align: right;
+    width: 50%; }
+  header h1 {
+    display: inline;
+    font-size: 1.4em;
+    padding-left: 8px; }
+  header img {
+    width: 70px;
+    margin-top: -5px; }
+
+footer {
+  position: fixed;
+  z-index: 9999999;
+  bottom: 10px;
+  left: 38px;
+  right: 38px;
+  font-weight: 300; }
+  footer .left {
+    width: 50%; }
+  footer .right {
+    text-align: right;
+    width: 50%; }
+
+.phone {
+  position: fixed;
+  z-index: 99;
+  width: 320px;
+  height: 560px;
+  left: 50%;
+  margin-left: -330px;
+  top: 50%;
+  margin-top: -290px; }
+  .phone .container {
+    position: relative;
+    width: 320px;
+    height: 560px; }
+    .phone .container img {
+      position: absolute;
+      width: 320px; }
+
+video {
+  position: fixed;
+  width: 230px;
+  top: 50%;
+  margin-top: -220px;
+  left: 50%;
+  margin-left: -305px;
+  z-index: 3; }
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none; }
+  #background .cloud, #background .sun {
+    position: absolute;
+    transition: 1.5s ease-in-out; }
+  #background #checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -20px;
+    opacity: 0;
+    transition: 0.5s ease-in-out; }
+  #background.one #sun {
+    left: -20%;
+    top: 40%; }
+  #background.one #cloud-1 {
+    left: 10%;
+    top: 30%; }
+  #background.one #cloud-2 {
+    left: 50%;
+    top: 130px; }
+  #background.one #cloud-3 {
+    right: 10%;
+    top: 20%; }
+  #background.one #cloud-4 {
+    right: -20%;
+    top: 32%; }
+  #background.two #sun {
+    left: 5%;
+    top: 15%; }
+  #background.two #cloud-1 {
+    left: -30px;
+    top: 30%; }
+  #background.two #cloud-2 {
+    left: 35%;
+    top: 130px; }
+  #background.two #cloud-3 {
+    right: 15%;
+    top: 20%; }
+  #background.two #cloud-4 {
+    right: -20%;
+    top: 32%; }
+  #background.three #sun {
+    left: 25%;
+    top: 8%; }
+  #background.three #cloud-1 {
+    left: -70px;
+    top: 30%; }
+  #background.three #cloud-2 {
+    left: 20%;
+    top: 130px; }
+  #background.three #cloud-3 {
+    right: 30%;
+    top: 20%; }
+  #background.three #cloud-4 {
+    right: 0%;
+    top: 32%; }
+  #background.four #sun {
+    left: 60%;
+    top: -5%; }
+  #background.four #cloud-1 {
+    left: -200px;
+    top: 30%; }
+  #background.four #cloud-2 {
+    left: -5%;
+    top: 130px; }
+  #background.four #cloud-3 {
+    right: 45%;
+    top: 20%; }
+  #background.four #cloud-4 {
+    right: 10%;
+    top: 32%; }
+  #background.five #sun {
+    left: 90%;
+    top: -15%; }
+  #background.five #cloud-1 {
+    left: -200px;
+    top: 30%; }
+  #background.five #cloud-2 {
+    left: -20%;
+    top: 130px; }
+  #background.five #cloud-3 {
+    right: 80%;
+    top: 20%; }
+  #background.five #cloud-4 {
+    right: 16%;
+    top: 32%; }
+  #background.six .cloud, #background.six .sun {
+    transition: 0.5s ease-in-out; }
+  #background.six #sun {
+    left: 90%;
+    top: -15%;
+    opacity: 0; }
+  #background.six #cloud-1 {
+    left: -200px;
+    top: 30%;
+    opacity: 0; }
+  #background.six #cloud-2 {
+    left: -20%;
+    top: 130px;
+    opacity: 0; }
+  #background.six #cloud-3 {
+    right: 90%;
+    top: 20%;
+    opacity: 0; }
+  #background.six #cloud-4 {
+    right: 23%;
+    top: 32%;
+    opacity: 0; }
+  #background.six #checkmark {
+    opacity: 1;
+    margin-top: -130px; }

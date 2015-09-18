@@ -1,0 +1,359 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Comfortaa:400,700,300);
+$one: #3590FC;
+$two: #44A2FC;
+$three: #55B7FC;
+$four: #62C7FC;
+$five: #5BCDEC;
+$six: #5ED2E3;
+$red: #F55;
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+}
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.15em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.red {
+  color: $red;
+}
+
+.section {
+
+  transition: background-color 0.5s ease;
+
+  h1 {
+    margin-top: 4em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+.color-one {
+  background: $one;
+}
+
+.color-two {
+  background: $two;
+}
+
+.color-three {
+  background: $three;
+}
+
+.color-four {
+  background: $four;
+}
+
+.color-five {
+  background: $five;
+}
+
+.color-six {
+  background: $six;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin-right: 20px;
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 300;
+  }
+
+  a:hover, a:active {
+    color: $one;
+    background: white;
+    border-radius: 2px;
+  }
+
+  a:visited {
+    color: white;
+  }
+}
+
+header {
+  position: fixed;
+  padding-top: 38px;
+  z-index: 9999999;
+  left: 38px;
+  right: 38px;
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    text-align: right;
+    width: 50%;
+  }
+
+  h1 {
+    display: inline;
+    font-size: 1.4em;
+    padding-left: 8px;
+  }
+
+  img {
+    width: 70px;
+    margin-top: -5px;
+  }
+}
+
+footer {
+  position: fixed;
+  z-index: 9999999;
+  bottom: 10px;
+  left: 38px;
+  right: 38px;
+  font-weight: 300;
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    text-align: right;
+    width: 50%;
+  }
+}
+
+.phone {
+  position: fixed;
+  z-index: 99;
+  width: 320px;
+  height: 560px;
+  left: 50%;
+  margin-left: -330px;
+  top: 50%;
+  margin-top: -290px;
+
+  .container {
+    position: relative;
+    width: 320px;
+    height: 560px;
+
+    img {
+      position: absolute;
+      width: 320px;
+    }
+  }
+}
+
+video {
+  position: fixed;
+  width: 230px;
+  top: 50%;
+  margin-top: -220px;
+  left: 50%;
+  margin-left: -305px;
+  z-index: 3;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  .cloud, .sun {
+    position: absolute;
+    transition: 1.5s ease-in-out;
+  }
+
+  #checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -20px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  &.one {
+    #sun {
+      left: -20%;
+      top: 40%;
+    }
+    #cloud-1 {
+      left: 10%;
+      top: 30%;
+    }
+    #cloud-2 {
+      left: 50%;
+      top: 130px;
+    }
+    #cloud-3 {
+      right: 10%;
+      top: 20%;
+    }
+    #cloud-4 {
+      right: -20%;
+      top: 32%;
+    }
+  }
+
+  &.two {
+    #sun {
+      left: 5%;
+      top: 15%;
+    }
+    #cloud-1 {
+      left: -30px;
+      top: 30%;
+    }
+    #cloud-2 {
+      left: 35%;
+      top: 130px;
+    }
+    #cloud-3 {
+      right: 15%;
+      top: 20%;
+    }
+    #cloud-4 {
+      right: -20%;
+      top: 32%;
+    }
+  }
+
+  &.three {
+    #sun {
+      left: 25%;
+      top: 8%;
+    }
+    #cloud-1 {
+      left: -70px;
+      top: 30%;
+    }
+    #cloud-2 {
+      left: 20%;
+      top: 130px;
+    }
+    #cloud-3 {
+      right: 30%;
+      top: 20%;
+    }
+    #cloud-4 {
+      right: 0%;
+      top: 32%;
+    }
+  }
+
+  &.four {
+    #sun {
+      left: 60%;
+      top: -5%;
+    }
+    #cloud-1 {
+      left: -200px;
+      top: 30%;
+    }
+    #cloud-2 {
+      left: -5%;
+      top: 130px;
+    }
+    #cloud-3 {
+      right: 45%;
+      top: 20%;
+    }
+    #cloud-4 {
+      right: 10%;
+      top: 32%;
+    }
+  }
+
+  &.five {
+    #sun {
+      left: 90%;
+      top: -15%;
+    }
+    #cloud-1 {
+      left: -200px;
+      top: 30%;
+    }
+    #cloud-2 {
+      left: -20%;
+      top: 130px;
+    }
+    #cloud-3 {
+      right: 80%;
+      top: 20%;
+    }
+    #cloud-4 {
+      right: 16%;
+      top: 32%;
+    }
+  }
+
+  &.six {
+
+    .cloud, .sun {
+      transition: 0.5s ease-in-out;
+    }
+
+    #sun {
+      left: 90%;
+      top: -15%;
+      opacity: 0;
+    }
+    #cloud-1 {
+      left: -200px;
+      top: 30%;
+      opacity: 0;
+    }
+    #cloud-2 {
+      left: -20%;
+      top: 130px;
+      opacity: 0;
+    }
+    #cloud-3 {
+      right: 90%;
+      top: 20%;
+      opacity: 0;
+    }
+    #cloud-4 {
+      right: 23%;
+      top: 32%;
+      opacity: 0;
+    }
+
+    #checkmark {
+      opacity: 1;
+      margin-top: -130px;
+    }
+  }
+}
+
