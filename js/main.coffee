@@ -11,14 +11,19 @@ $ ->
 
   for colorClass in colorClasses
     $('.section').removeClass(colorClass)
-    $('.hider').removeClass(colorClass)
 
   $('.section').addClass('color-one')
-  $('.hider').addClass('color-one')
   $('#background').addClass('one')
+  $('#screen').addClass('one')
+  $('#phone2').addClass('one')
+  $('#phone3').addClass('one')
 
   $('#fullpage').fullpage
     onLeave: (index, nextIndex, direction) ->
+
+      player_Plan.stop()
+      player_Adapt.stop()
+      player_Inbox.stop()
 
       if index == 1
         $('.one .end').fadeOut(200)
@@ -42,38 +47,50 @@ $ ->
       # Remove background color classes
       for colorClass in colorClasses
         $('.section').removeClass(colorClass)
-        $('.hider').removeClass(colorClass)
 
       $('#background').removeClass()
+      $('#screen').removeClass()
+      $('#phone2').removeClass()
+      $('#phone3').removeClass()
 
       # Fade next index in and set background color class
       if nextIndex == 1
         $('.one .end').delay(400).fadeIn()
         $('.section').addClass('color-one')
-        $('.hider').addClass('color-one')
         $('#background').addClass('one')
+        $('#screen').addClass('one')
       else if nextIndex == 2
         $('.two .end').delay(400).fadeIn()
         $('.section').addClass('color-two')
-        $('.hider').addClass('color-two')
         $('#background').addClass('two')
+        $('#screen').addClass('two')
+        player_Plan.setCurrentFrameNumber(0)
+        player_Plan.play()
       else if nextIndex == 3
         $('.three .end').delay(400).fadeIn()
         $('.section').addClass('color-three')
-        $('.hider').addClass('color-three')
         $('#background').addClass('three')
+        $('#screen').addClass('three')
+        player_Adapt.setCurrentFrameNumber(0)
+        player_Adapt.play()
       else if nextIndex == 4
         $('.four .end').delay(400).fadeIn()
         $('.section').addClass('color-four')
-        $('.hider').addClass('color-four')
         $('#background').addClass('four')
+        $('#screen').addClass('four')
+        player_Inbox.setCurrentFrameNumber(0)
+        player_Inbox.play()
       else if nextIndex == 5
         $('.five .end').delay(400).fadeIn()
         $('.section').addClass('color-five')
-        $('.hider').addClass('color-five')
         $('#background').addClass('five')
+        $('#screen').addClass('five')
+        $('#phone2').addClass('five')
+        $('#phone3').addClass('five')
       else if nextIndex == 6
         $('.six .end').delay(400).fadeIn()
         $('.section').addClass('color-six')
-        $('.hider').addClass('color-six')
         $('#background').addClass('six')
+        $('#screen').addClass('six')
+        $('#phone2').addClass('six')
+        $('#phone3').addClass('six')

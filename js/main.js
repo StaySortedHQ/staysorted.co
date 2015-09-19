@@ -6,14 +6,18 @@
     for (_i = 0, _len = colorClasses.length; _i < _len; _i++) {
       colorClass = colorClasses[_i];
       $('.section').removeClass(colorClass);
-      $('.hider').removeClass(colorClass);
     }
     $('.section').addClass('color-one');
-    $('.hider').addClass('color-one');
     $('#background').addClass('one');
+    $('#screen').addClass('one');
+    $('#phone2').addClass('one');
+    $('#phone3').addClass('one');
     return $('#fullpage').fullpage({
       onLeave: function(index, nextIndex, direction) {
         var _j, _len1;
+        player_Plan.stop();
+        player_Adapt.stop();
+        player_Inbox.stop();
         if (index === 1) {
           $('.one .end').fadeOut(200);
           $('.two .end').fadeOut(0);
@@ -36,39 +40,51 @@
         for (_j = 0, _len1 = colorClasses.length; _j < _len1; _j++) {
           colorClass = colorClasses[_j];
           $('.section').removeClass(colorClass);
-          $('.hider').removeClass(colorClass);
         }
         $('#background').removeClass();
+        $('#screen').removeClass();
+        $('#phone2').removeClass();
+        $('#phone3').removeClass();
         if (nextIndex === 1) {
           $('.one .end').delay(400).fadeIn();
           $('.section').addClass('color-one');
-          $('.hider').addClass('color-one');
-          return $('#background').addClass('one');
+          $('#background').addClass('one');
+          return $('#screen').addClass('one');
         } else if (nextIndex === 2) {
           $('.two .end').delay(400).fadeIn();
           $('.section').addClass('color-two');
-          $('.hider').addClass('color-two');
-          return $('#background').addClass('two');
+          $('#background').addClass('two');
+          $('#screen').addClass('two');
+          player_Plan.setCurrentFrameNumber(0);
+          return player_Plan.play();
         } else if (nextIndex === 3) {
           $('.three .end').delay(400).fadeIn();
           $('.section').addClass('color-three');
-          $('.hider').addClass('color-three');
-          return $('#background').addClass('three');
+          $('#background').addClass('three');
+          $('#screen').addClass('three');
+          player_Adapt.setCurrentFrameNumber(0);
+          return player_Adapt.play();
         } else if (nextIndex === 4) {
           $('.four .end').delay(400).fadeIn();
           $('.section').addClass('color-four');
-          $('.hider').addClass('color-four');
-          return $('#background').addClass('four');
+          $('#background').addClass('four');
+          $('#screen').addClass('four');
+          player_Inbox.setCurrentFrameNumber(0);
+          return player_Inbox.play();
         } else if (nextIndex === 5) {
           $('.five .end').delay(400).fadeIn();
           $('.section').addClass('color-five');
-          $('.hider').addClass('color-five');
-          return $('#background').addClass('five');
+          $('#background').addClass('five');
+          $('#screen').addClass('five');
+          $('#phone2').addClass('five');
+          return $('#phone3').addClass('five');
         } else if (nextIndex === 6) {
           $('.six .end').delay(400).fadeIn();
           $('.section').addClass('color-six');
-          $('.hider').addClass('color-six');
-          return $('#background').addClass('six');
+          $('#background').addClass('six');
+          $('#screen').addClass('six');
+          $('#phone2').addClass('six');
+          return $('#phone3').addClass('six');
         }
       }
     });

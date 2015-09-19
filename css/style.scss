@@ -164,20 +164,263 @@ footer {
 
     img {
       position: absolute;
-      width: 320px;
+      width: 316px;
     }
   }
 }
 
-video {
+#phone2 {
   position: fixed;
-  width: 230px;
-  top: 50%;
-  margin-top: -220px;
+  z-index: 1;
+  width: 320px;
+  height: 560px;
   left: 50%;
-  margin-left: -305px;
-  z-index: 3;
+  margin-left: -330px;
+  top: 50%;
+  margin-top: -290px;
+
+  .container {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    position: relative;
+
+    img {
+      position: absolute;
+    }
+
+    .screenshot {
+      top: 71px;
+      left: 25px;
+      width: 232px;
+    }
+  }
+
+  &.five {
+    .container {
+      opacity: 1;
+      transform: translate(-140px,0px) rotate(-9deg) scale(0.9, 0.9);
+    }
+  }
 }
+
+#phone3 {
+  position: fixed;
+  z-index: 1;
+  width: 320px;
+  height: 560px;
+  left: 50%;
+  margin-left: -330px;
+  top: 50%;
+  margin-top: -290px;
+
+  .container {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+
+    img {
+      position: absolute;
+    }
+
+    .screenshot {
+      top: 71px;
+      left: 25px;
+      width: 232px;
+    }
+  }
+
+  &.five {
+    .container {
+      opacity: 1;
+      transform: translate(-80px,0px) rotate(-5deg) scale(0.95, 0.95);
+    }
+  }
+}
+
+#screen {
+  position: fixed;
+  width: 228px;
+  height: 410px;
+  top: 50%;
+  left: 50%;
+  margin-top: -220px;
+  margin-left: -306px;
+  z-index: 3;
+  overflow: hidden;
+
+  #main_screen {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%;
+  }
+
+  #anim_target_Plan {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%;
+  }
+
+  #anim_target_Adapt {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%;
+  }
+
+  #anim_target_Inbox {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%;
+  }
+
+  #theme_screen {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%;
+  }
+
+  #notification_screen {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%;
+  }
+
+  &.one {
+    #main_screen {
+      top: 0%;
+    }
+    #anim_target_Plan {
+      top: 100%;
+    }
+
+    #anim_target_Adapt {
+      top: 100%;
+    }
+
+    #anim_target_Inbox {
+      top: 100%;
+    }
+
+    #theme_screen {
+      top: 100%;
+    }
+  }
+
+  &.two {
+    #main_screen {
+      top: -100%;
+    }
+    #anim_target_Plan {
+      top: 0%;
+    }
+
+    #anim_target_Adapt {
+      top: 100%;
+    }
+
+    #anim_target_Inbox {
+      top: 100%;
+    }
+
+    #theme_screen {
+      top: 100%;
+    }
+  }
+
+  &.three {
+    #main_screen {
+      top: -100%;
+    }
+    #anim_target_Plan {
+      top: -100%;
+    }
+
+    #anim_target_Adapt {
+      top: 0%;
+    }
+
+    #anim_target_Inbox {
+      top: 100%;
+    }
+
+    #theme_screen {
+      top: 100%;
+    }
+  }
+
+  &.four {
+   #main_screen {
+    top: -100%;
+   }
+   #anim_target_Plan {
+      top: -100%;
+    }
+
+    #anim_target_Adapt {
+      top: -100%;
+    }
+
+    #anim_target_Inbox {
+      top: 0%;
+    }
+
+    #theme_screen {
+      top: 100%;
+    }
+  }
+
+  &.five {
+   #main_screen {
+    top: -100%;
+   }
+   #anim_target_Plan {
+      top: -100%;
+    }
+
+    #anim_target_Adapt {
+      top: -100%;
+    }
+
+    #anim_target_Inbox {
+      top: -100%;
+    }
+
+    #theme_screen {
+      top: 0%;
+    }
+  }
+
+  &.six {
+    #main_screen {
+      top: -100%;
+    }
+    #anim_target_Plan {
+      top: -100%;
+    }
+
+    #anim_target_Adapt {
+      top: -100%;
+    }
+
+    #anim_target_Inbox {
+      top: -100%;
+    }
+
+    #theme_screen {
+      top: -100%;
+    }
+
+    #notification_screen {
+      top: 0%;
+    }
+  }
+}
+
+
 
 #background {
   position: fixed;

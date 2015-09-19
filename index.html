@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+  <script type="text/javascript" src="js/phosphorframework.js"></script>
   <script src='js/jquery.fullPage.js'></script>
+  <script src='js/plan_player.js'></script>
+  <script src='js/inbox_player.js'></script>
+  <script src='js/adapt_player.js'></script>
   <script src="js/main.js"></script>
 </head>
 <body>
@@ -31,16 +35,33 @@
     </div>
   </header>
 
-  <div class="phone">
+  <div class="phone" id="phone2">
     <div class="container">
+      <img class="screenshot" src="images/Airbaby.png" alt="">
+      <img src="images/phone2.png" alt="">
+    </div>
+  </div>
+  <div class="phone" id="phone3">
+    <div class="container">
+      <img class="screenshot" src="images/Slacker.png" alt="">
       <img src="images/phone2.png" alt="">
     </div>
   </div>
 
-  <video autoplay loop>
-    <source src="videos/Plan.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <div class="phone">
+    <div class="container">
+      <img id="primary-phone" src="images/phone2.png" alt="">
+    </div>
+  </div>
+
+  <div id="screen" class="one">
+    <img id="main_screen" src="images/Screen.png" alt="OneReminder">
+    <img id="anim_target_Plan" src="videos/Plan/Plan.jpg"/>
+    <img id="anim_target_Adapt" src="videos/Adapt/Adapt.jpg"/>
+    <img id="anim_target_Inbox" src="videos/Inbox/Inbox.jpg"/>
+    <img id="theme_screen" src="images/Screen.png" alt="OneReminder">
+    <img id="notification_screen" src="images/notification.png" alt="OneReminder">
+  </div>
 
   <div id="background" class="one">
     <img id="checkmark" class="checkmark" src="images/Checkmark.svg" alt="Checkmark">
@@ -60,7 +81,7 @@
         <div class="small-5 columns end">
           <h1>Task management <br> as fast as a breeze.</h1>
           <p>OneReminder is a fast, easy way to manage your ever changing tasks and day. Update and manage many tasks at a time with a few simple swipes.</p>
-          <a href="#"><img class="appstore" src="images/appstore2.svg" alt="App Store"></a>
+          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
     </div>
@@ -73,7 +94,7 @@
         <div class="small-5 columns end">
           <h1>Plan your day in seconds.</h1>
           <p>Reorder your schedule. Pinch to spread out your reminders. Tap calendar to postpone tasks to another day. Fast and distraction free.</p>
-          <a href="#"><img class="appstore" src="images/appstore2.svg" alt="App Store"></a>
+          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
     </div>
@@ -86,7 +107,7 @@
         <div class="small-5 columns end">
           <h1>Adapt quickly to change.</h1>
           <p>Your day changes. Change with it. Pinch to insert. Swipe to chain select. Ruler to shift reminders earlier or later. Master change like never before.</p>
-          <a href="#"><img class="appstore" src="images/appstore2.svg" alt="App Store"></a>
+          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
     </div>
@@ -99,7 +120,7 @@
         <div class="small-5 columns end">
           <h1>Clear your mind.</h1>
           <p>Collect your ideas and tasks in our inbox. Schedule them with a tap. Or move leftover tasks back to organize later.</p>
-          <a href="#"><img class="appstore" src="images/appstore2.svg" alt="App Store"></a>
+          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
     </div>
@@ -112,7 +133,7 @@
         <div class="small-5 columns end">
           <h1>Get to done in style.</h1>
           <p>Task managers can be a very personal thing. Get to done faster and in style with OneReminder's colorful themes.</p>
-          <a href="#"><img class="appstore" src="images/appstore2.svg" alt="App Store"></a>
+          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
     </div>
@@ -125,7 +146,7 @@
         <div class="small-5 columns end">
           <h1>Do more. Manage less.</h1>
           <p>Boost your productivity with OneReminder today!</p>
-          <a href="#"><img class="appstore" src="images/appstore2.svg" alt="App Store"></a>
+          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
     </div>
@@ -144,6 +165,7 @@
       </ul>
     </div>
   </footer>
+
 
 </body>
 </html>

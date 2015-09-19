@@ -113,16 +113,155 @@ footer {
     height: 560px; }
     .phone .container img {
       position: absolute;
-      width: 320px; }
+      width: 316px; }
 
-video {
+#phone2 {
   position: fixed;
-  width: 230px;
-  top: 50%;
-  margin-top: -220px;
+  z-index: 1;
+  width: 320px;
+  height: 560px;
   left: 50%;
-  margin-left: -305px;
-  z-index: 3; }
+  margin-left: -330px;
+  top: 50%;
+  margin-top: -290px; }
+  #phone2 .container {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    position: relative; }
+    #phone2 .container img {
+      position: absolute; }
+    #phone2 .container .screenshot {
+      top: 71px;
+      left: 25px;
+      width: 232px; }
+  #phone2.five .container {
+    opacity: 1;
+    transform: translate(-140px, 0px) rotate(-9deg) scale(0.9, 0.9); }
+
+#phone3 {
+  position: fixed;
+  z-index: 1;
+  width: 320px;
+  height: 560px;
+  left: 50%;
+  margin-left: -330px;
+  top: 50%;
+  margin-top: -290px; }
+  #phone3 .container {
+    transition: 0.5s ease-in-out;
+    opacity: 0; }
+    #phone3 .container img {
+      position: absolute; }
+    #phone3 .container .screenshot {
+      top: 71px;
+      left: 25px;
+      width: 232px; }
+  #phone3.five .container {
+    opacity: 1;
+    transform: translate(-80px, 0px) rotate(-5deg) scale(0.95, 0.95); }
+
+#screen {
+  position: fixed;
+  width: 228px;
+  height: 410px;
+  top: 50%;
+  left: 50%;
+  margin-top: -220px;
+  margin-left: -306px;
+  z-index: 3;
+  overflow: hidden; }
+  #screen #main_screen {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%; }
+  #screen #anim_target_Plan {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%; }
+  #screen #anim_target_Adapt {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%; }
+  #screen #anim_target_Inbox {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%; }
+  #screen #theme_screen {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%; }
+  #screen #notification_screen {
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 100%; }
+  #screen.one #main_screen {
+    top: 0%; }
+  #screen.one #anim_target_Plan {
+    top: 100%; }
+  #screen.one #anim_target_Adapt {
+    top: 100%; }
+  #screen.one #anim_target_Inbox {
+    top: 100%; }
+  #screen.one #theme_screen {
+    top: 100%; }
+  #screen.two #main_screen {
+    top: -100%; }
+  #screen.two #anim_target_Plan {
+    top: 0%; }
+  #screen.two #anim_target_Adapt {
+    top: 100%; }
+  #screen.two #anim_target_Inbox {
+    top: 100%; }
+  #screen.two #theme_screen {
+    top: 100%; }
+  #screen.three #main_screen {
+    top: -100%; }
+  #screen.three #anim_target_Plan {
+    top: -100%; }
+  #screen.three #anim_target_Adapt {
+    top: 0%; }
+  #screen.three #anim_target_Inbox {
+    top: 100%; }
+  #screen.three #theme_screen {
+    top: 100%; }
+  #screen.four #main_screen {
+    top: -100%; }
+  #screen.four #anim_target_Plan {
+    top: -100%; }
+  #screen.four #anim_target_Adapt {
+    top: -100%; }
+  #screen.four #anim_target_Inbox {
+    top: 0%; }
+  #screen.four #theme_screen {
+    top: 100%; }
+  #screen.five #main_screen {
+    top: -100%; }
+  #screen.five #anim_target_Plan {
+    top: -100%; }
+  #screen.five #anim_target_Adapt {
+    top: -100%; }
+  #screen.five #anim_target_Inbox {
+    top: -100%; }
+  #screen.five #theme_screen {
+    top: 0%; }
+  #screen.six #main_screen {
+    top: -100%; }
+  #screen.six #anim_target_Plan {
+    top: -100%; }
+  #screen.six #anim_target_Adapt {
+    top: -100%; }
+  #screen.six #anim_target_Inbox {
+    top: -100%; }
+  #screen.six #theme_screen {
+    top: -100%; }
+  #screen.six #notification_screen {
+    top: 0%; }
 
 #background {
   position: fixed;
