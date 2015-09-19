@@ -25,7 +25,6 @@ var Inbox_framecount = 0;
       animationData: data,
       loop: true,
       onLoad: function() {
-        player_Inbox.play();
 
         /**
          * If your Phosphor composition was created with the "interactive" mode set, the code below enables that
