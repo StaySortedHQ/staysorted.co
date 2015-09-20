@@ -45,7 +45,7 @@ p {
 .color-six {
   background: #5ed2e3; }
 
-.hidden {
+.show-small {
   visibility: hidden; }
 
 ul.nav {
@@ -69,7 +69,7 @@ ul.nav {
 header {
   position: fixed;
   padding-top: 38px;
-  z-index: 9999999;
+  z-index: 99;
   left: 38px;
   right: 38px; }
   header .left {
@@ -85,18 +85,47 @@ header {
     width: 70px;
     margin-top: -5px; }
 
+.small-heading {
+  margin-top: -40px; }
+
+.fullWidth {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial; }
+
 footer {
   position: fixed;
-  z-index: 9999999;
+  z-index: 99;
   bottom: 10px;
   left: 38px;
   right: 38px;
   font-weight: 300; }
   footer .left {
-    width: 50%; }
+    text-align: left; }
+  footer .center {
+    text-align: center; }
   footer .right {
-    text-align: right;
-    width: 50%; }
+    text-align: right; }
+
+@keyframes bounce {
+  from {
+    -ms-transform: translate(0px, -25px);
+    -webkit-transform: translate(0px, -25px);
+    transform: translate(0px, -25px); }
+
+  to {
+    -ms-transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    transform: translate(0px, 5px); } }
+.down-arrow {
+  position: absolute;
+  animation: bounce ease-in-out 1s infinite alternate;
+  width: 50px; }
+
+.phone-image {
+  width: 250px;
+  margin-left: 20px; }
 
 .phone {
   position: fixed;
@@ -163,6 +192,38 @@ footer {
     -ms-transform: translate(-100px, 0px) rotate(-5deg) scale(0.9, 0.9);
     -webkit-transform: translate(-100px, 0px) rotate(-5deg) scale(0.9, 0.9);
     transform: translate(-100px, 0px) rotate(-5deg) scale(0.9, 0.9); }
+
+.section.five .phone-container {
+  position: relative; }
+.section.five .phone-image.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+  .section.five .phone-image.left .screenshot {
+    position: absolute;
+    width: 181px;
+    left: 19px;
+    top: 55px;
+    z-index: -2; }
+.section.five .phone-image.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1; }
+  .section.five .phone-image.right .screenshot {
+    position: absolute;
+    width: 181px;
+    right: 50px;
+    top: 55px;
+    z-index: -2; }
+.section.five .phone-screen {
+  position: absolute;
+  width: 181px;
+  left: 50%;
+  top: 55px;
+  margin-left: -96px;
+  z-index: -1; }
 
 #screen {
   position: fixed;
@@ -386,3 +447,36 @@ footer {
   #background.six #checkmark {
     opacity: 1;
     margin-top: -130px; }
+
+@media only screen and (max-width: 40em) {
+  canvas {
+    display: none !important; }
+
+  h1 {
+    font-size: 1.1em; }
+
+  .appstore {
+    height: 40px;
+    background: rgba(0, 20, 70, 0.8);
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); }
+
+  .show-small {
+    visibility: visible; }
+
+  #background {
+    z-index: 0; }
+
+  header {
+    padding-top: 10px;
+    left: 8px;
+    right: 8px; }
+    header img {
+      width: 30px; }
+    header h1 {
+      font-size: 1em;
+      font-weight: 300; }
+
+  footer {
+    position: static;
+    font-weight: 300; } }

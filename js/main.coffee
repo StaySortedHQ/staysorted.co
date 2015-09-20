@@ -9,16 +9,15 @@ $ ->
     'color-six'
   ]
 
-  for colorClass in colorClasses
-    $('.section').removeClass(colorClass)
-
-  $('.section').addClass('color-one')
+  $('body').addClass('color-one')
   $('#background').addClass('one')
   $('#screen').addClass('one')
   $('#phone2').addClass('one')
   $('#phone3').addClass('one')
 
   $('#fullpage').fullpage
+    # responsiveWidth: 500
+    fixedElements: '.phone'
     onLeave: (index, nextIndex, direction) ->
 
       player_Plan.stop()
@@ -49,6 +48,7 @@ $ ->
         $('.section').removeClass(colorClass)
 
       $('#background').removeClass()
+      $('body').removeClass()
       $('#screen').removeClass()
       $('#phone2').removeClass()
       $('#phone3').removeClass()
@@ -56,40 +56,40 @@ $ ->
       # Fade next index in and set background color class
       if nextIndex == 1
         $('.one .end').delay(400).fadeIn()
-        $('.section').addClass('color-one')
+        $('body').addClass('color-one')
         $('#background').addClass('one')
         $('#screen').addClass('one')
       else if nextIndex == 2
         $('.two .end').delay(400).fadeIn()
-        $('.section').addClass('color-two')
+        $('body').addClass('color-two')
         $('#background').addClass('two')
         $('#screen').addClass('two')
         player_Plan.setCurrentFrameNumber(0)
         player_Plan.play()
       else if nextIndex == 3
         $('.three .end').delay(400).fadeIn()
-        $('.section').addClass('color-three')
+        $('body').addClass('color-three')
         $('#background').addClass('three')
         $('#screen').addClass('three')
         player_Adapt.setCurrentFrameNumber(0)
         player_Adapt.play()
       else if nextIndex == 4
         $('.four .end').delay(400).fadeIn()
-        $('.section').addClass('color-four')
+        $('body').addClass('color-four')
         $('#background').addClass('four')
         $('#screen').addClass('four')
         player_Inbox.setCurrentFrameNumber(0)
         player_Inbox.play()
       else if nextIndex == 5
         $('.five .end').delay(400).fadeIn()
-        $('.section').addClass('color-five')
+        $('body').addClass('color-five')
         $('#background').addClass('five')
         $('#screen').addClass('five')
         $('#phone2').addClass('five')
         $('#phone3').addClass('five')
       else if nextIndex == 6
         $('.six .end').delay(400).fadeIn()
-        $('.section').addClass('color-six')
+        $('body').addClass('color-six')
         $('#background').addClass('six')
         $('#screen').addClass('six')
         $('#phone2').addClass('six')
