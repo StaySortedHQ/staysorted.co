@@ -144,7 +144,7 @@ footer {
   left: 50%;
   margin-left: -330px;
   top: 50%;
-  margin-top: -290px; }
+  margin-top: -260px; }
   .phone .container {
     position: relative;
     width: 320px;
@@ -161,7 +161,7 @@ footer {
   left: 50%;
   margin-left: -330px;
   top: 50%;
-  margin-top: -290px; }
+  margin-top: -260px; }
   #phone2 .container {
     transition: 0.5s ease-in-out;
     opacity: 0;
@@ -186,7 +186,7 @@ footer {
   left: 50%;
   margin-left: -330px;
   top: 50%;
-  margin-top: -290px; }
+  margin-top: -260px; }
   #phone3 .container {
     transition: 0.5s ease-in-out;
     opacity: 0; }
@@ -240,7 +240,7 @@ footer {
   height: 410px;
   top: 50%;
   left: 50%;
-  margin-top: -220px;
+  margin-top: -190px;
   margin-left: -306px;
   z-index: 3;
   overflow: hidden; }
@@ -551,3 +551,17 @@ footer {
 
   #cloud-3 {
     visibility: hidden; } }
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
+  body header {
+    padding-top: 10px;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.8); }
+    body header img {
+      width: 30px;
+      margin-left: 0px; }
+    body header h1 {
+      font-size: 1em;
+      font-weight: 300; } }
