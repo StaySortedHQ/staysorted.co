@@ -16,7 +16,9 @@ $ ->
   $('#phone3').addClass('one')
 
   $('#fullpage').fullpage
+    navigation: true
     responsiveWidth: 500
+    fitToSectionDelay: 9999999
     fixedElements: '.phone'
     onLeave: (index, nextIndex, direction) ->
 
