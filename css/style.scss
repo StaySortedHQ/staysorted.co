@@ -189,6 +189,10 @@ footer {
   width: 50px;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 .phone-image {
   width: 250px;
   margin-left: 20px;
@@ -854,6 +858,8 @@ footer {
 
     }
   }
+
+
 
   #phone2 {
     position: fixed;

@@ -55,6 +55,7 @@ $ ->
       $('#screen').removeClass()
       $('#phone2').removeClass()
       $('#phone3').removeClass()
+      $('.down-arrow').removeClass('hide')
 
       # Fade next index in and set background color class
       if nextIndex == 1
@@ -97,3 +98,4 @@ $ ->
         $('#screen').addClass('six')
         $('#phone2').addClass('six')
         $('#phone3').addClass('six')
+        $('.down-arrow').addClass('hide')

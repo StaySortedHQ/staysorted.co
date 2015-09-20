@@ -47,6 +47,7 @@
         $('#screen').removeClass();
         $('#phone2').removeClass();
         $('#phone3').removeClass();
+        $('.down-arrow').removeClass('hide');
         if (nextIndex === 1) {
           $('.one .end').delay(400).fadeIn();
           $('body').addClass('color-one');
@@ -86,7 +87,8 @@
           $('#background').addClass('six');
           $('#screen').addClass('six');
           $('#phone2').addClass('six');
-          return $('#phone3').addClass('six');
+          $('#phone3').addClass('six');
+          return $('.down-arrow').addClass('hide');
         }
       }
     });
