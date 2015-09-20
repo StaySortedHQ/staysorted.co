@@ -9,6 +9,7 @@
     $('#phone2').addClass('one');
     $('#phone3').addClass('one');
     return $('#fullpage').fullpage({
+      responsiveWidth: 500,
       fixedElements: '.phone',
       onLeave: function(index, nextIndex, direction) {
         var colorClass, _i, _len;

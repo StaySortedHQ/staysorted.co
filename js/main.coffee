@@ -16,7 +16,7 @@ $ ->
   $('#phone3').addClass('one')
 
   $('#fullpage').fullpage
-    # responsiveWidth: 500
+    responsiveWidth: 500
     fixedElements: '.phone'
     onLeave: (index, nextIndex, direction) ->
 
