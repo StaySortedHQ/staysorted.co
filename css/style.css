@@ -360,7 +360,7 @@ footer {
     transition: 0.5s ease-in-out;
     z-index: 0; }
   #background.one #sun {
-    left: -20%;
+    left: -30%;
     top: 16%; }
   #background.one #cloud-1 {
     left: 10%;
@@ -390,7 +390,7 @@ footer {
     right: -20%;
     top: 32%; }
   #background.three #sun {
-    left: 25%;
+    left: 35%;
     top: 8%; }
   #background.three #cloud-1 {
     left: -70px;
@@ -406,7 +406,7 @@ footer {
     top: 32%; }
   #background.four #sun {
     left: 60%;
-    top: -3%; }
+    top: 5%; }
   #background.four #cloud-1 {
     left: -200px;
     top: 30%; }
@@ -420,8 +420,8 @@ footer {
     right: 10%;
     top: 32%; }
   #background.five #sun {
-    left: 90%;
-    top: -15%; }
+    left: 120%;
+    top: -4%; }
   #background.five #cloud-1 {
     left: -200px;
     top: 30%; }
