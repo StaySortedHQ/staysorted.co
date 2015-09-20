@@ -854,5 +854,76 @@ footer {
 
     }
   }
+
+  #phone2 {
+    position: fixed;
+    z-index: 1;
+    width: 320px;
+    height: 560px;
+    left: 50%;
+    margin-left: -330px;
+    top: 50%;
+    margin-top: -260px;
+
+    .container {
+      transition: 0.5s ease-in-out;
+      opacity: 0;
+      position: relative;
+
+      img {
+        position: absolute;
+      }
+
+      .screenshot {
+        top: 71px;
+        left: 25px;
+        width: 232px;
+      }
+    }
+
+    &.five {
+      .container {
+        opacity: 1;
+        -ms-transform: translate(80px,30px) scale(0.80, 0.80);
+        -webkit-transform: translate(80px,30px) scale(0.80, 0.80);
+        transform: translate(80px,30px) scale(0.80, 0.80);
+      }
+    }
+  }
+
+  #phone3 {
+    position: fixed;
+    z-index: 1;
+    width: 320px;
+    height: 560px;
+    left: 50%;
+    margin-left: -330px;
+    top: 50%;
+    margin-top: -260px;
+
+    .container {
+      transition: 0.5s ease-in-out;
+      opacity: 0;
+
+      img {
+        position: absolute;
+      }
+
+      .screenshot {
+        top: 71px;
+        left: 25px;
+        width: 232px;
+      }
+    }
+
+    &.five {
+      .container {
+        opacity: 1;
+        -ms-transform: translate(-80px,30px) scale(0.8, 0.8);
+        -webkit-transform: translate(-80px,30px) scale(0.8, 0.8);
+        transform: translate(-80px,30px) scale(0.8, 0.8);
+      }
+    }
+  }
 }
 
