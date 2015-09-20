@@ -64,7 +64,6 @@ a {
 
 a:hover, a:active {
   color: #3590fc;
-  background: white;
   border-radius: 2px; }
 
 a:visited {
