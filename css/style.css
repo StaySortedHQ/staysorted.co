@@ -615,4 +615,14 @@ footer {
       opacity: 1;
       -ms-transform: translate(-80px, 30px) scale(0.8, 0.8);
       -webkit-transform: translate(-80px, 30px) scale(0.8, 0.8);
-      transform: translate(-80px, 30px) scale(0.8, 0.8); } }
+      transform: translate(-80px, 30px) scale(0.8, 0.8); }
+
+  footer {
+    left: 12px;
+    right: 0px;
+    bottom: 0px; }
+    footer .column, footer .columns {
+      padding: 0; }
+
+  a {
+    padding-right: 0 !important; } }

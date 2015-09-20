@@ -931,5 +931,18 @@ footer {
       }
     }
   }
+
+  footer {
+    left: 12px;
+    right: 0px;
+    bottom: 0px;
+    .column, .columns {
+      padding: 0;
+    }
+  }
+
+  a {
+    padding-right: 0 !important;
+  }
 }
 
