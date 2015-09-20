@@ -420,8 +420,8 @@ footer {
     right: 10%;
     top: 32%; }
   #background.five #sun {
-    left: 120%;
-    top: -4%; }
+    left: 80%;
+    top: 10%; }
   #background.five #cloud-1 {
     left: -200px;
     top: 30%; }
@@ -437,8 +437,8 @@ footer {
   #background.six .cloud, #background.six .sun {
     transition: 0.5s ease-in-out; }
   #background.six #sun {
-    left: 90%;
-    top: -15%;
+    left: 110%;
+    top: 15%;
     opacity: 0; }
   #background.six #cloud-1 {
     left: -200px;
