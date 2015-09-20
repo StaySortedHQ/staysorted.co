@@ -19,6 +19,7 @@ $ ->
     navigation: true
     responsiveWidth: 500
     fitToSectionDelay: 9999999
+    paddingTop: '50px'
     fixedElements: '.phone'
     onLeave: (index, nextIndex, direction) ->
 

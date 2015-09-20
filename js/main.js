@@ -12,6 +12,7 @@
       navigation: true,
       responsiveWidth: 500,
       fitToSectionDelay: 9999999,
+      paddingTop: '50px',
       fixedElements: '.phone',
       onLeave: function(index, nextIndex, direction) {
         var colorClass, _i, _len;
