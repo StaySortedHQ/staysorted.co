@@ -527,8 +527,11 @@ footer {
 
   #checkmark {
     left: 50%;
-    margin-left: -150px !important;
-    margin-top: -180px !important; }
+    margin-left: -170px !important;
+    margin-top: -180px !important;
+    -ms-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7); }
 
   .small-apple {
     width: 12px;
@@ -537,9 +540,14 @@ footer {
   footer {
     position: static;
     font-weight: 300;
-    background: rgba(0, 0, 0, 0.9); }
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 2em; }
     footer ul.nav {
-      margin-top: 1em; }
+      margin-top: 1em;
+      border-top: 1px solid rgba(255, 255, 255, 0.1); }
       footer ul.nav li {
         display: block !important;
-        padding-top: 1em; } }
+        padding-top: 1em; }
+
+  #cloud-3 {
+    visibility: hidden; } }
