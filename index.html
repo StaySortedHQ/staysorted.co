@@ -15,6 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
   <script type="text/javascript" src="js/phosphorframework.js"></script>
+  <script src='js/mediaCheck-min.js'></script>
   <script src='js/jquery.fullPage.js'></script>
   <script src='js/plan_player.js'></script>
   <script src='js/inbox_player.js'></script>
@@ -37,6 +38,32 @@
       </div>
     </div>
   </header>
+
+  <!-- Email sign up form -->
+  <div id="email-modal">
+    <form class="email-form" method="post" action="http://onereminderemailcollector9863.herokuapp.com/signup">
+      <div class="row">
+        <div class="medium-12 columns text-center">
+          <h1>Join the beta for iOS</h1>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="medium-9 columns">
+          <input class="email" name="email" type="email" placeholder="your@email.com">
+        </div>
+        <div class="medium-3 columns">
+          <button class="postfix signup" type="submit">Join</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-12 columns">
+          <div class="form-message"></div>
+          <div class="form-error"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+
 
   <div class="phone" id="phone2">
     <div class="container hide-for-small-only">
@@ -88,7 +115,7 @@
         <div class="hide-for-small-only medium-5 columns end">
           <h1>Task management <br class="show-for-large-up"> fast as a breeze.</h1>
           <p>OneReminder is a fast, easy way to manage your ever changing tasks and day. Update and manage many tasks at a time with a few simple swipes.</p>
-          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
        <!-- Small title -->
@@ -110,7 +137,7 @@
         <div class="hide-for-small-only medium-5 columns end">
           <h1>Plan your day in seconds.</h1>
           <p>Reorder your schedule. Pinch to spread out your reminders. Tap calendar to postpone tasks to another day. Fast and distraction free.</p>
-          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
       <!-- Small title -->
@@ -133,7 +160,7 @@
         <div class="hide-for-small-only medium-5 columns end">
           <h1>Adapt quickly to change.</h1>
           <p>Your day changes. Change with it. Pinch to insert. Swipe to chain select. Ruler to shift reminders earlier or later. Master change like never before.</p>
-          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
 
@@ -157,7 +184,7 @@
         <div class="hide-for-small-only medium-5 columns end">
           <h1>Clear your mind.</h1>
           <p>Collect your ideas and tasks in our inbox. Schedule them with a tap. Or move leftover tasks back to organize later.</p>
-          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
 
@@ -190,7 +217,7 @@
         <div class="hide-for-small-only medium-5 columns end">
           <h1>Get to done in style.</h1>
           <p>Task managers can be a very personal thing. Get to done faster and in style with OneReminder's colorful themes.</p>
-          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
 
@@ -214,7 +241,7 @@
         <div class="hide-for-small-only medium-5 columns end">
           <h1>Do more. Manage less.</h1>
           <p>There's so much more, but don't waste time. Boost your productivity with OneReminder today!</p>
-          <a href="#"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
         </div>
       </div>
 

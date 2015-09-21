@@ -1,5 +1,68 @@
 $ ->
 
+  # function validateEmail(email){
+  #   var emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  #   var valid = emailReg.test(email);
+
+  #   if(!valid) {
+  #         return false;
+  #     } else {
+  #       return true;
+  #     }
+  # }
+
+  $('#email-modal').on 'click', (e) ->
+    $(@).fadeOut()
+
+  $('.join-beta').on 'click', (e) ->
+    e.preventDefault()
+    $('#email-modal').fadeIn()
+
+  $('input').on 'click', (e) ->
+    e.stopImmediatePropagation()
+
+  $('button').on 'click', (e) ->
+    e.stopImmediatePropagation()
+
+  emailIsValid = (email) ->
+    emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)
+    return emailReg.test email
+
+  $('.email-form').submit (e) ->
+
+    # prevent default
+    e.preventDefault()
+
+    # get values
+    form = $(@)
+    action = form.attr('action')
+    email = $.trim(form.find('input[name=email]')[0].value)
+
+    successField = $(form.find('.form-message'))
+    errorField = $(form.find('.form-error'))
+
+    successField.html('').fadeOut(0)
+    errorField.html('').fadeOut(0)
+
+    # check if email is valid
+    if emailIsValid(email)
+
+      formData = {
+        'email' : email
+      }
+
+      $.ajax({
+        type      : 'POST'
+        url       : action
+        data      : formData
+        dataType  : 'json'
+        encode    : true
+      }).fail (data) ->
+        successField.html('Thank you. You will receive an email soon.').fadeIn()
+    else
+      errorField.html('Please check your email again. Thanks.').fadeIn()
+
+
   colorClasses = [
     'color-one'
     'color-two'
@@ -14,6 +77,22 @@ $ ->
   $('#screen').addClass('one')
   $('#phone2').addClass('one')
   $('#phone3').addClass('one')
+
+  # Small
+  mediaCheck
+    media: '(max-width: 40em)'
+    entry: ->
+      console.log('small')
+    exit: ->
+      console.log('')
+
+  # Medium Up
+  mediaCheck
+    media: '(min-width: 40.063em)'
+    entry: ->
+      console.log('medium')
+    exit: ->
+      console.log('')
 
   $('#fullpage').fullpage
     navigation: true
