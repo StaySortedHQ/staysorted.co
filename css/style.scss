@@ -46,7 +46,7 @@ p {
   }
 }
 
-#fp-nav {
+#fp-nav, .fp-slidesNav {
   span {
     background: white !important;
   }
@@ -822,6 +822,7 @@ canvas {
     left: 0;
     right: 0;
     height: 45px;
+    font-size: 0.8em;
 
     background: rgba(0,0,0,0.8);
 
@@ -881,6 +882,10 @@ canvas {
     }
   }
 
+  .screenshot {
+    width: 220px;
+  }
+
   #checkmark {
     left: 50%;
     margin-left: -170px !important;
@@ -896,10 +901,13 @@ canvas {
   }
 
   footer {
-    position: static;
     font-weight: 300;
     background: rgba(0,0,0,0.9);
     padding-top: 2em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
 
     ul.nav {
 
@@ -942,8 +950,6 @@ canvas {
 
     }
   }
-
-
 
   #phone2 {
     position: fixed;
