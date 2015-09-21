@@ -21,12 +21,13 @@
       return emailReg.test(email);
     };
     setupFullPageSmall = function() {
-      return $('#fullPageSmall').fullpage({
+      $('#fullPageSmall').fullpage({
         sectionSelector: '.sectionSmall',
         loopHorizontal: false,
         controlArrows: false,
         slidesNavigation: true
       });
+      return $.fn.fullpage.setAllowScrolling(true, 'left, right');
     };
     setupFullPageMediumUp = function() {
       return $('#fullpage').fullpage({

@@ -35,6 +35,9 @@ $ ->
       controlArrows: false
       slidesNavigation: true
 
+    $.fn.fullpage.setAllowScrolling(true, 'left, right')
+
+
   setupFullPageMediumUp = ->
     $('#fullpage').fullpage
       navigation: true

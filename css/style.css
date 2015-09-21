@@ -155,6 +155,9 @@ footer {
       position: absolute;
       width: 316px; }
 
+.ignore-touch {
+  pointer-events: none; }
+
 #phone2 {
   position: fixed;
   z-index: 1;
