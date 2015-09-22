@@ -2,9 +2,7 @@
 (function() {
   $(function() {
     var colorClasses, emailIsValid, setupFullPageMediumUp, setupFullPageSmall;
-    window.addEventListener('orientationchange', function() {
-      return location.reload(false);
-    });
+    window.addEventListener('orientationchange', function() {});
     $('#email-modal').on('click', function(e) {
       return $(this).fadeOut();
     });
@@ -154,6 +152,8 @@
     mediaCheck({
       media: '(max-width: 40em)',
       entry: function() {
+        setupFullPageSmall();
+        $.fn.fullpage.destroy('all');
         return setupFullPageSmall();
       },
       exit: function() {
@@ -163,6 +163,8 @@
     return mediaCheck({
       media: '(min-width: 40.063em)',
       entry: function() {
+        setupFullPageMediumUp();
+        $.fn.fullpage.destroy('all');
         return setupFullPageMediumUp();
       },
       exit: function() {

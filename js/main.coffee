@@ -20,7 +20,7 @@ $ ->
   #   });
 
   window.addEventListener 'orientationchange', ->
-    location.reload(false)
+    # location.reload(false)
 
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
@@ -191,6 +191,8 @@ $ ->
     media: '(max-width: 40em)'
     entry: ->
       setupFullPageSmall()
+      $.fn.fullpage.destroy('all');
+      setupFullPageSmall()
     exit: ->
       console.log('')
 
@@ -198,6 +200,8 @@ $ ->
   mediaCheck
     media: '(min-width: 40.063em)'
     entry: ->
+      setupFullPageMediumUp()
+      $.fn.fullpage.destroy('all');
       setupFullPageMediumUp()
     exit: ->
       console.log('')
