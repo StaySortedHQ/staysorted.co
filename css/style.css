@@ -593,7 +593,7 @@ canvas {
     margin-top: -10px; }
 
   .screenshot {
-    height: 70%; }
+    position: static; }
 
   #checkmark {
     left: 50%;
