@@ -2,10 +2,6 @@ var player_InboxSmall = null;
 var player_InboxSmall_path = "videos/InboxSmall/"; // path to Phosphor files on your server
 
 var instantiateInboxSmall = function() {
-
-}
-
-$(document).ready(function(){
   player_InboxSmall = new PhosphorPlayer('anim_target_InboxSmall');
   phosphorCallback_InboxSmall = function(data) {
 
@@ -22,6 +18,8 @@ $(document).ready(function(){
    jsonpScript.id = "jsonPinclude_InboxSmall";
    jsonpScript.src = player_InboxSmall_path + "InboxSmall_animationData.jsonp";
    document.getElementsByTagName("head")[0].appendChild(jsonpScript);
+}
 
-
+$(document).ready(function(){
+  instantiateInboxSmall()
 });
