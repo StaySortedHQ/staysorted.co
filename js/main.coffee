@@ -12,7 +12,7 @@ $ ->
   # }
 
   window.addEventListener 'load', () ->
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 5)
 
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
