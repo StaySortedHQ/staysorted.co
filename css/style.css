@@ -534,7 +534,8 @@ canvas {
     display: none !important; }
 
   h1 {
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    margin-top: 1.2em; }
 
   .appstore {
     height: 30px;
