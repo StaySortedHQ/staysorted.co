@@ -608,7 +608,7 @@ canvas {
     margin-right: 4px; }
 
   footer {
-    position: static;
+    display: none;
     font-weight: 300;
     background: rgba(0, 0, 0, 0.9);
     padding-top: 2em;

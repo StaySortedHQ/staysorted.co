@@ -25,9 +25,7 @@
         sectionSelector: '.sectionSmall',
         loopHorizontal: false,
         controlArrows: false,
-        slidesNavigation: true,
-        autoScrolling: false,
-        fitToSection: false
+        slidesNavigation: true
       });
       return $.fn.fullpage.setAllowScrolling(true, 'left, right');
     };
