@@ -2,9 +2,6 @@
 (function() {
   $(function() {
     var colorClasses, emailIsValid, setupFullPageMediumUp, setupFullPageSmall;
-    window.addEventListener('load', function() {
-      return window.scrollTo(0, 5);
-    });
     $('#email-modal').on('click', function(e) {
       return $(this).fadeOut();
     });
@@ -29,7 +26,8 @@
         loopHorizontal: false,
         controlArrows: false,
         slidesNavigation: true,
-        autoScrolling: false
+        autoScrolling: false,
+        fitToSection: false
       });
       return $.fn.fullpage.setAllowScrolling(true, 'left, right');
     };

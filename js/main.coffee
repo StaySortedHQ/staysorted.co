@@ -11,9 +11,6 @@ $ ->
   #     }
   # }
 
-  window.addEventListener 'load', () ->
-    window.scrollTo(0, 5)
-
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
 
@@ -38,6 +35,7 @@ $ ->
       controlArrows: false
       slidesNavigation: true
       autoScrolling: false
+      fitToSection: false
 
     $.fn.fullpage.setAllowScrolling(true, 'left, right')
 
