@@ -537,6 +537,11 @@ canvas {
     font-size: 1.4em;
     margin-top: 1.2em; }
 
+  .fp-controlArrow {
+    -ms-transform: scale(0.3, 0.3);
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3); }
+
   .appstore {
     height: 30px;
     background: rgba(0, 20, 70, 0.8);

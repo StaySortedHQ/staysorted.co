@@ -32,7 +32,7 @@ $ ->
     $('#fullPageSmall').fullpage
       sectionSelector: '.sectionSmall'
       loopHorizontal: false
-      controlArrows: false
+      controlArrows: true
       slidesNavigation: false
       paddingTop: '80px'
 
