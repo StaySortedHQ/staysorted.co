@@ -6,7 +6,7 @@ var instantiateInboxSmall = function() {
   phosphorCallback_InboxSmall = function(data) {
 
      player_InboxSmall.load_animation({
-      imageArray:["InboxSmall_atlas000.jpg","InboxSmall_atlas001.jpg"],
+      imageArray:["InboxSmall_atlas000.png","InboxSmall_atlas001.png"],
       imagePath: player_InboxSmall_path,
       animationData: data,
       loop: true,
@@ -20,6 +20,6 @@ var instantiateInboxSmall = function() {
    document.getElementsByTagName("head")[0].appendChild(jsonpScript);
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
   instantiateInboxSmall()
 });
