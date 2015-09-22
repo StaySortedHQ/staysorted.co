@@ -2,6 +2,9 @@
 (function() {
   $(function() {
     var colorClasses, emailIsValid, setupFullPageMediumUp, setupFullPageSmall;
+    window.addEventListener('load', function() {
+      return window.scrollTo(0, 0);
+    });
     $('#email-modal').on('click', function(e) {
       return $(this).fadeOut();
     });
