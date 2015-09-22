@@ -19,8 +19,11 @@ $ ->
   #     }, 10);
   #   });
 
+  orientationchange = false
+
   window.addEventListener 'orientationchange', ->
     # location.reload(false)
+    orientationchange = true
 
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
@@ -46,8 +49,10 @@ $ ->
       controlArrows: true
       slidesNavigation: false
       paddingTop: '80px'
+      afterResize: ->
+        location.reload(false)
 
-    $.fn.fullpage.setAllowScrolling(true, 'left, right')
+    # $.fn.fullpage.setAllowScrolling(true, 'left, right')
 
 
   setupFullPageMediumUp = ->
