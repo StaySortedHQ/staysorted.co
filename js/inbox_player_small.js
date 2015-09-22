@@ -6,7 +6,7 @@ var instantiateInboxSmall = function() {
   phosphorCallback_InboxSmall = function(data) {
 
      player_InboxSmall.load_animation({
-      imageArray:["InboxSmall_atlas000.png","InboxSmall_atlas001.png"],
+      imageArray:["InboxSmall_atlas000.jpg","InboxSmall_atlas001.jpg"],
       imagePath: player_InboxSmall_path,
       animationData: data,
       loop: true,
