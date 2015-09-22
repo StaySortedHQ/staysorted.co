@@ -22,7 +22,6 @@ $ ->
   window.addEventListener 'orientationchange', ->
     location.reload(false)
 
-
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
 
