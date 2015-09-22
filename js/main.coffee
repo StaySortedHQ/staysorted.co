@@ -11,6 +11,8 @@ $ ->
   #     }
   # }
 
+  firstLoad = true
+
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
 
@@ -180,6 +182,10 @@ $ ->
     media: '(max-width: 40em)'
     entry: ->
       setupFullPageSmall()
+      # console.log('small entry + firstload: ' + firstLoad)
+      if !firstLoad
+        location.reload(false)
+      firstLoad = false
     exit: ->
       console.log('')
 
