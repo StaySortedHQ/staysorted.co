@@ -608,13 +608,13 @@ canvas {
     margin-right: 4px; }
 
   footer {
+    position: static;
     font-weight: 300;
     background: rgba(0, 0, 0, 0.9);
     padding-top: 2em;
     left: 0;
     right: 0;
-    bottom: 0;
-    display: none; }
+    bottom: 0; }
     footer ul.nav {
       margin-top: 1em;
       border-top: 1px solid rgba(255, 255, 255, 0.1); }

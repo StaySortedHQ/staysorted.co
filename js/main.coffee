@@ -37,6 +37,7 @@ $ ->
       loopHorizontal: false
       controlArrows: false
       slidesNavigation: true
+      autoScrolling: false
 
     $.fn.fullpage.setAllowScrolling(true, 'left, right')
 
