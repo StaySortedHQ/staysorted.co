@@ -20,8 +20,7 @@ $ ->
   #   });
 
   window.addEventListener 'orientationchange', ->
-    console.log "lala"
-    location.reload()
+    location.reload(false)
 
 
   $('#email-modal').on 'click', (e) ->

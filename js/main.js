@@ -3,8 +3,7 @@
   $(function() {
     var colorClasses, emailIsValid, setupFullPageMediumUp, setupFullPageSmall;
     window.addEventListener('orientationchange', function() {
-      console.log("lala");
-      return location.reload();
+      return location.reload(false);
     });
     $('#email-modal').on('click', function(e) {
       return $(this).fadeOut();
