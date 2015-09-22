@@ -33,9 +33,8 @@ $ ->
       sectionSelector: '.sectionSmall'
       loopHorizontal: false
       controlArrows: false
-      slidesNavigation: true
+      slidesNavigation: false
       paddingTop: '80px'
-      paddingBottom: '20px'
 
     $.fn.fullpage.setAllowScrolling(true, 'left, right')
 

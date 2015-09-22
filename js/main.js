@@ -25,9 +25,8 @@
         sectionSelector: '.sectionSmall',
         loopHorizontal: false,
         controlArrows: false,
-        slidesNavigation: true,
-        paddingTop: '80px',
-        paddingBottom: '20px'
+        slidesNavigation: false,
+        paddingTop: '80px'
       });
       return $.fn.fullpage.setAllowScrolling(true, 'left, right');
     };
