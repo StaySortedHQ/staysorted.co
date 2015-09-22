@@ -831,8 +831,14 @@ canvas {
 
 @media only screen and (max-width: 40em) {
 
-  canvas {
+  #screen canvas {
     display: none !important;
+  }
+
+  canvas {
+    height: 320px;
+    width: 180px;
+    margin: 0 auto;
   }
 
   h1 {
@@ -929,7 +935,7 @@ canvas {
 
   .screenshot {
     position: static;
-    height: 43%;
+    height: 320px;
   }
 
   #checkmark {

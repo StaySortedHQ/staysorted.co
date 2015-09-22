@@ -26,7 +26,7 @@
         loopHorizontal: false,
         controlArrows: true,
         slidesNavigation: false,
-        paddingTop: '80px',
+        paddingTop: '25%',
         afterResize: function() {
           return location.reload(false);
         }
