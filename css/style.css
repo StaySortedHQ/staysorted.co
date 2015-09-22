@@ -534,7 +534,8 @@ canvas {
     display: none !important; }
 
   h1 {
-    font-size: 1.1em; }
+    font-size: 1.4em;
+    margin-bottom: 1em; }
 
   .appstore {
     height: 30px;
@@ -593,7 +594,7 @@ canvas {
     margin-top: -10px; }
 
   .screenshot {
-    width: 220px; }
+    width: 60%; }
 
   #checkmark {
     left: 50%;
