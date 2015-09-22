@@ -30,10 +30,14 @@ $ ->
       controlArrows: true
       slidesNavigation: false
       paddingTop: '25%'
-
       afterResize: ->
         # Reload on resizing
         location.reload(false)
+      onSlideLeave: (anchorLink, index, slideIndex, direction, nextSlideIndex) ->
+
+        if nextSlideIndex == 3
+          player_InboxSmall.setCurrentFrameNumber(0)
+          player_InboxSmall.play()
 
 
   # Setup fullpage.js for medium sized screen and up
