@@ -11,7 +11,18 @@ $ ->
   #     }
   # }
 
-  firstLoad = true
+  # window.addEventListener('orientationchange', function () {
+  #     var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
+  #     document.body.style.display='none';
+  #     setTimeout(function () {
+  #       document.body.style.display =  getComputedStyle(document.body).getPropertyValue('display');
+  #     }, 10);
+  #   });
+
+  window.addEventListener 'orientationchange', ->
+    console.log "lala"
+    location.reload()
+
 
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
@@ -182,10 +193,6 @@ $ ->
     media: '(max-width: 40em)'
     entry: ->
       setupFullPageSmall()
-      # console.log('small entry + firstload: ' + firstLoad)
-      if !firstLoad
-        location.reload(false)
-      firstLoad = false
     exit: ->
       console.log('')
 
