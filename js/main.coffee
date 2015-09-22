@@ -34,7 +34,7 @@ $ ->
       loopHorizontal: false
       controlArrows: false
       slidesNavigation: true
-      paddingTop: '45px'
+      paddingTop: '10px'
 
     $.fn.fullpage.setAllowScrolling(true, 'left, right')
 
