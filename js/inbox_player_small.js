@@ -23,6 +23,6 @@ var instantiateInboxSmall = function() {
   }
 }
 
-// $(document).ready(function() {
-//   instantiateInboxSmall()
-// });
+$(document).ready(function() {
+  instantiateInboxSmall()
+});

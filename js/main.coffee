@@ -131,7 +131,6 @@ $ ->
   mediaCheck
     media: '(max-width: 40em)'
     entry: ->
-      instantiateInboxSmall()
       setupFullPageSmall()
       $.fn.fullpage.destroy('all')
       setupFullPageSmall()

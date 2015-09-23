@@ -119,7 +119,6 @@
     mediaCheck({
       media: '(max-width: 40em)',
       entry: function() {
-        instantiateInboxSmall();
         setupFullPageSmall();
         $.fn.fullpage.destroy('all');
         return setupFullPageSmall();
