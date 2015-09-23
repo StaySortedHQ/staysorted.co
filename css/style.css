@@ -40,6 +40,11 @@ h1 {
   font-size: 2em;
   font-weight: 400; }
 
+h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.1em;
+  font-weight: 300; }
+
 p {
   font-size: 1.15em;
   font-weight: 300;
@@ -552,6 +557,51 @@ canvas {
   .email-form :-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.9); }
 
+#mobile {
+  padding-top: 50px;
+  text-align: center; }
+  #mobile h1 {
+    margin: 1em; }
+  #mobile .content {
+    padding-top: 320px; }
+  #mobile .screenshot, #mobile .screenshot.left, #mobile .screenshot.right {
+    position: absolute;
+    transform: scale(0.9, 0.9); }
+  #mobile .screenshot.center {
+    left: 50%;
+    margin-left: -90px;
+    z-index: 1;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+  #mobile .screenshot.left {
+    left: 50%;
+    margin-left: -140px;
+    transform: scale(0.8, 0.8) rotate(-3deg);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+  #mobile .screenshot.right {
+    right: 50%;
+    margin-right: -130px;
+    transform: scale(0.8, 0.8) rotate(3deg);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+  #mobile .fa-play-circle-o {
+    font-size: 2em; }
+  #mobile .beta {
+    margin-top: 1em;
+    height: 45px; }
+  #mobile section {
+    margin-top: 2em;
+    padding: 1em 0;
+    background: rgba(255, 255, 255, 0.1); }
+    #mobile section h1 {
+      margin-bottom: 0; }
+    #mobile section h2 {
+      margin: 1em 0; }
+  #mobile .footer {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: rgba(255, 255, 255, 0.2); }
+    #mobile .footer ul {
+      margin-bottom: 0; }
+
 /*
 * Media Query: Small Screen
 */
@@ -586,6 +636,7 @@ canvas {
     z-index: 0; }
 
   header {
+    display: none;
     padding-top: 10px;
     left: 0;
     right: 0;
@@ -660,8 +711,27 @@ canvas {
         display: block !important;
         padding-top: 1em; }
 
+  .cloud {
+    -ms-transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8); }
+
+  #sun {
+    display: none; }
+
+  #cloud-1 {
+    top: 120px;
+    right: 20px; }
+
+  #cloud-2 {
+    top: 140px; }
+
   #cloud-3 {
-    visibility: hidden; } }
+    visibility: hidden; }
+
+  #cloud-4 {
+    top: 240px;
+    right: 60px; } }
 /*
 * Media Query: Medium Screen
 */
