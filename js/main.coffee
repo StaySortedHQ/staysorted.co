@@ -69,10 +69,7 @@ setupFullPageSmall = ->
       # Reload on resizing
       location.reload(false)
     onSlideLeave: (anchorLink, index, slideIndex, direction, nextSlideIndex) ->
-
-      if nextSlideIndex == 3
-        player_InboxSmall.setCurrentFrameNumber(0)
-        player_InboxSmall.play()
+      console.log 'lala'
 
 setupFullPageMediumUp = ->
   $('#fullpage').fullpage

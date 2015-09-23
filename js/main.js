@@ -65,10 +65,7 @@
         return location.reload(false);
       },
       onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {
-        if (nextSlideIndex === 3) {
-          player_InboxSmall.setCurrentFrameNumber(0);
-          return player_InboxSmall.play();
-        }
+        return console.log('lala');
       }
     });
   };
