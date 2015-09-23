@@ -52,14 +52,14 @@
   };
 
   setupFullPageMediumUp = function() {
-    $('body').hide();
+    $('main').hide();
     return $('#fullpage').fullpage({
       navigation: true,
       fitToSectionDelay: 9999999,
       paddingTop: '50px',
       fixedElements: '.phone',
       afterRender: function() {
-        return $('body').fadeIn(1000);
+        return $('main').fadeIn(1000);
       },
       onLeave: function(index, nextIndex, direction) {
         if (typeof player_Plan !== "undefined" && player_Plan !== null) {
@@ -98,9 +98,9 @@
   handleOrientation = function(e) {
     var height;
     height = window.innerHeight;
-    console.log(height);
     if (height < 480) {
-      return $('body').hide();
+      $('main').hide();
+      return $('.rotate').fadeIn();
     }
   };
 
@@ -110,7 +110,8 @@
       media: '(min-width: 40.063em)',
       entry: function() {
         if (window.innerHeight < 480) {
-          return $('body').hide();
+          $('main').hide();
+          return $('.rotate').fadeIn();
         } else {
           instantiatePlan();
           instantiateAdapt();
@@ -119,7 +120,8 @@
         }
       },
       exit: function() {
-        return $('body').fadeIn(0);
+        $('main').fadeIn(0);
+        return $('.rotate').hide();
       }
     });
   });

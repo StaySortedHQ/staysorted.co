@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Comfortaa:400,700,300);
 body {
-  display: none;
   transition: background-color 0.5s ease;
   font-family: 'Lato', sans-serif;
   color: white;
@@ -32,6 +31,9 @@ body {
     background: #29b5d1; }
     body.fp-viewing-5 .six .end, body.fp-viewing-0-5 .six .end {
       opacity: 1; }
+
+main {
+  display: none; }
 
 h1, h2, h3, h4, h5 {
   color: white; }
@@ -602,6 +604,24 @@ canvas {
     background: rgba(255, 255, 255, 0.2); }
     #mobile .footer ul {
       margin-bottom: 0; }
+
+/*
+* Rotate device
+*/
+.rotate {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 2em;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -1em; }
+  .rotate img {
+    width: 50px;
+    vertical-align: center;
+    margin-right: 1em; }
 
 /*
 * Media Query: Small Screen

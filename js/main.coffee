@@ -57,7 +57,7 @@ emailIsValid = (email) ->
   return emailReg.test email
 
 setupFullPageMediumUp = ->
-  $('body').hide()
+  $('main').hide()
 
   $('#fullpage').fullpage
     navigation: true
@@ -65,7 +65,7 @@ setupFullPageMediumUp = ->
     paddingTop: '50px'
     fixedElements: '.phone'
     afterRender: ->
-      $('body').fadeIn(1000)
+      $('main').fadeIn(1000)
     onLeave: (index, nextIndex, direction) ->
 
       # Stop playing Phosphors
@@ -110,9 +110,9 @@ setupFullPageMediumUp = ->
 
 handleOrientation = (e) ->
   height = window.innerHeight
-  console.log height
   if height < 480
-    $('body').hide()
+    $('main').hide()
+    $('.rotate').fadeIn()
 
 $ ->
 
@@ -126,7 +126,8 @@ $ ->
     entry: ->
 
       if window.innerHeight < 480
-        $('body').hide()
+        $('main').hide()
+        $('.rotate').fadeIn()
       else
         instantiatePlan()
         instantiateAdapt()
@@ -134,5 +135,6 @@ $ ->
         setupFullPageMediumUp()
 
     exit: ->
-      $('body').fadeIn(0)
+      $('main').fadeIn(0)
+      $('.rotate').hide()
 
