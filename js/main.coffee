@@ -57,7 +57,7 @@ emailIsValid = (email) ->
   return emailReg.test email
 
 setupFullPageMediumUp = ->
-  $('main').hide()
+  $('main#main').hide()
 
   $('#fullpage').fullpage
     navigation: true
@@ -65,7 +65,7 @@ setupFullPageMediumUp = ->
     paddingTop: '50px'
     fixedElements: '.phone'
     afterRender: ->
-      $('main').fadeIn(1000)
+      $('main#main').fadeIn(1000)
     onLeave: (index, nextIndex, direction) ->
 
       # Stop playing Phosphors
@@ -111,7 +111,7 @@ setupFullPageMediumUp = ->
 handleOrientation = (e) ->
   height = window.innerHeight
   if height < 480
-    $('main').hide()
+    $('main#main').hide()
     $('.rotate').fadeIn()
 
 playerInstantiated = false
@@ -129,7 +129,7 @@ $ ->
     entry: ->
 
       if window.innerHeight < 480
-        $('main').hide()
+        $('main#main').hide()
         $('.rotate').fadeIn()
       else
 
@@ -146,6 +146,6 @@ $ ->
           fullPageSetupAlready = true
 
     exit: ->
-      $('main').fadeIn(0)
+      $('main#main').fadeIn(0)
       $('.rotate').hide()
 

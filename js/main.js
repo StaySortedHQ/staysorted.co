@@ -52,14 +52,14 @@
   };
 
   setupFullPageMediumUp = function() {
-    $('main').hide();
+    $('main#main').hide();
     return $('#fullpage').fullpage({
       navigation: true,
       fitToSectionDelay: 9999999,
       paddingTop: '50px',
       fixedElements: '.phone',
       afterRender: function() {
-        return $('main').fadeIn(1000);
+        return $('main#main').fadeIn(1000);
       },
       onLeave: function(index, nextIndex, direction) {
         if (typeof player_Plan !== "undefined" && player_Plan !== null) {
@@ -99,7 +99,7 @@
     var height;
     height = window.innerHeight;
     if (height < 480) {
-      $('main').hide();
+      $('main#main').hide();
       return $('.rotate').fadeIn();
     }
   };
@@ -114,7 +114,7 @@
       media: '(min-width: 40.063em)',
       entry: function() {
         if (window.innerHeight < 480) {
-          $('main').hide();
+          $('main#main').hide();
           return $('.rotate').fadeIn();
         } else {
           if (!playerInstantiated) {
@@ -130,7 +130,7 @@
         }
       },
       exit: function() {
-        $('main').fadeIn(0);
+        $('main#main').fadeIn(0);
         return $('.rotate').hide();
       }
     });

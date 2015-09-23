@@ -32,7 +32,7 @@ body {
     body.fp-viewing-5 .six .end, body.fp-viewing-0-5 .six .end {
       opacity: 1; }
 
-main {
+main#main {
   display: none; }
 
 h1, h2, h3, h4, h5 {
@@ -699,6 +699,17 @@ canvas {
     width: 50px;
     vertical-align: center;
     margin-right: 1em; }
+
+#about h1 {
+  margin-bottom: 2em; }
+#about .content {
+  padding-top: 160px; }
+#about ol {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
+  padding: 1em 0; }
+  #about ol li {
+    padding: 0.25em; }
 
 /*
 * Media Query: Small Screen

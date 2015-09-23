@@ -61,7 +61,7 @@ body {
   }
 }
 
-main {
+main#main {
   display: none;
 }
 
@@ -1026,6 +1026,26 @@ canvas {
     width: 50px;
     vertical-align: center;
     margin-right: 1em;
+  }
+}
+
+#about {
+
+  h1 {
+    margin-bottom: 2em;
+  }
+
+  .content {
+    padding-top: 160px;
+  }
+
+  ol {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    padding: 1em 0;
+    li {
+      padding: 0.25em;
+    }
   }
 }
 
