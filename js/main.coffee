@@ -1,5 +1,4 @@
-$ ->
-
+setupEmailModal = ->
   # Hide email modal on clicking background
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
@@ -16,77 +15,6 @@ $ ->
   # Prevent closing email modal when tapping on button
   $('button').on 'click', (e) ->
     e.stopImmediatePropagation()
-
-  # Email validation helper
-  emailIsValid = (email) ->
-    emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)
-    return emailReg.test email
-
-  # Setup fullpage.js for small screen
-  setupFullPageSmall = ->
-    $('#fullPageSmall').fullpage
-      sectionSelector: '.sectionSmall'
-      loopHorizontal: false
-      controlArrows: true
-      slidesNavigation: false
-      paddingTop: '25%'
-      afterResize: ->
-        # Reload on resizing
-        location.reload(false)
-      onSlideLeave: (anchorLink, index, slideIndex, direction, nextSlideIndex) ->
-
-        if nextSlideIndex == 3
-          player_InboxSmall.setCurrentFrameNumber(0)
-          player_InboxSmall.play()
-
-
-  # Setup fullpage.js for medium sized screen and up
-  setupFullPageMediumUp = ->
-    $('#fullpage').fullpage
-      navigation: true
-      fitToSectionDelay: 9999999
-      paddingTop: '50px'
-      fixedElements: '.phone'
-      onLeave: (index, nextIndex, direction) ->
-
-        # Stop playing Phosphors
-        player_Plan.stop()
-        player_Adapt.stop()
-        player_Inbox.stop()
-
-        $('#screen').removeClass()
-        $('.down-arrow').removeClass('hide')
-
-        # Fade next index in and set background color class
-        if nextIndex == 1
-          $('#screen').addClass('one')
-        else if nextIndex == 2
-          $('#screen').addClass('two')
-
-          # Play Phosphor
-          player_Plan.setCurrentFrameNumber(0)
-          player_Plan.play()
-
-        else if nextIndex == 3
-          $('#screen').addClass('three')
-
-          # Play Phosphor
-          player_Adapt.setCurrentFrameNumber(0)
-          player_Adapt.play()
-
-        else if nextIndex == 4
-          $('#screen').addClass('four')
-
-          # Play Phosphor
-          player_Inbox.setCurrentFrameNumber(0)
-          player_Inbox.play()
-
-        else if nextIndex == 5
-          $('#screen').addClass('five')
-        else if nextIndex == 6
-          $('#screen').addClass('six')
-          $('.down-arrow').addClass('hide')
-
 
   # Handle email form submit
   $('.email-form').submit (e) ->
@@ -122,6 +50,77 @@ $ ->
         successField.html('Thank you. You will receive an email soon.').fadeIn()
     else
       errorField.html('Please check your email again. Thanks.').fadeIn()
+
+# Email validation helper
+emailIsValid = (email) ->
+  emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)
+  return emailReg.test email
+
+setupFullPageSmall = ->
+  $('#fullPageSmall').fullpage
+    sectionSelector: '.sectionSmall'
+    loopHorizontal: false
+    controlArrows: true
+    slidesNavigation: false
+    paddingTop: '25%'
+    afterResize: ->
+      # Reload on resizing
+      location.reload(false)
+    onSlideLeave: (anchorLink, index, slideIndex, direction, nextSlideIndex) ->
+
+      if nextSlideIndex == 3
+        player_InboxSmall.setCurrentFrameNumber(0)
+        player_InboxSmall.play()
+
+setupFullPageMediumUp = ->
+  $('#fullpage').fullpage
+    navigation: true
+    fitToSectionDelay: 9999999
+    paddingTop: '50px'
+    fixedElements: '.phone'
+    onLeave: (index, nextIndex, direction) ->
+
+      # Stop playing Phosphors
+      player_Plan.stop()
+      player_Adapt.stop()
+      player_Inbox.stop()
+
+      $('#screen').removeClass()
+      $('.down-arrow').removeClass('hide')
+
+      # Fade next index in and set background color class
+      if nextIndex == 1
+        $('#screen').addClass('one')
+      else if nextIndex == 2
+        $('#screen').addClass('two')
+
+        # Play Phosphor
+        player_Plan.setCurrentFrameNumber(0)
+        player_Plan.play()
+
+      else if nextIndex == 3
+        $('#screen').addClass('three')
+
+        # Play Phosphor
+        player_Adapt.setCurrentFrameNumber(0)
+        player_Adapt.play()
+
+      else if nextIndex == 4
+        $('#screen').addClass('four')
+
+        # Play Phosphor
+        player_Inbox.setCurrentFrameNumber(0)
+        player_Inbox.play()
+
+      else if nextIndex == 5
+        $('#screen').addClass('five')
+      else if nextIndex == 6
+        $('#screen').addClass('six')
+        $('.down-arrow').addClass('hide')
+
+$ ->
+
+  setupEmailModal()
 
   # CSS Media Query check: Small
   mediaCheck
