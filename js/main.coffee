@@ -56,28 +56,16 @@ emailIsValid = (email) ->
   emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)
   return emailReg.test email
 
-setupFullPageSmall = ->
-  $('#fullPageSmall').fullpage
-    sectionSelector: '.sectionSmall'
-    loopHorizontal: false
-    controlArrows: true
-    slidesNavigation: false
-    paddingTop: '25%'
-    afterRender: ->
-      console.log 'after render'
-    afterResize: ->
-      # Reload on resizing
-      location.reload(false)
-    onSlideLeave: (anchorLink, index, slideIndex, direction, nextSlideIndex) ->
-      console.log 'lala'
-
 setupFullPageMediumUp = ->
+  $('body').hide()
+
   $('#fullpage').fullpage
     navigation: true
     fitToSectionDelay: 9999999
     paddingTop: '50px'
     fixedElements: '.phone'
     afterRender: ->
+      $('body').fadeIn(1000)
     onLeave: (index, nextIndex, direction) ->
 
       # Stop playing Phosphors
@@ -120,27 +108,31 @@ setupFullPageMediumUp = ->
         $('#screen').addClass('six')
         $('.down-arrow').addClass('hide')
 
+handleOrientation = (e) ->
+  height = window.innerHeight
+  console.log height
+  if height < 480
+    $('body').hide()
+
 $ ->
 
-  setupEmailModal()
+  # window.addEventListener('deviceorientation', handleOrientation, true)
 
-  # CSS Media Query check: Small
-  mediaCheck
-    media: '(max-width: 40em)'
-    entry: ->
-      setupFullPageSmall()
-      $.fn.fullpage.destroy('all')
-      setupFullPageSmall()
+  setupEmailModal()
 
   # CSS Media Query check: Medium Up
   mediaCheck
     media: '(min-width: 40.063em)'
     entry: ->
-      instantiatePlan()
-      instantiateAdapt()
-      instantiateInbox()
-      setupFullPageMediumUp()
-      $.fn.fullpage.destroy('all')
-      setupFullPageMediumUp()
 
+      if window.innerHeight < 480
+        $('body').hide()
+      else
+        instantiatePlan()
+        instantiateAdapt()
+        instantiateInbox()
+        setupFullPageMediumUp()
+
+    exit: ->
+      $('body').fadeIn(0)
 
