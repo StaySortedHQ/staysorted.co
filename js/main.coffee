@@ -114,6 +114,9 @@ handleOrientation = (e) ->
     $('main').hide()
     $('.rotate').fadeIn()
 
+playerInstantiated = false
+fullPageSetupAlready = false
+
 $ ->
 
   # window.addEventListener('deviceorientation', handleOrientation, true)
@@ -129,10 +132,18 @@ $ ->
         $('main').hide()
         $('.rotate').fadeIn()
       else
-        instantiatePlan()
-        instantiateAdapt()
-        instantiateInbox()
-        setupFullPageMediumUp()
+
+        # Instantiate players if not done so already
+        if !playerInstantiated
+          instantiatePlan()
+          instantiateAdapt()
+          instantiateInbox()
+          playerInstantiated = true
+
+        # setup full page if needed
+        if !fullPageSetupAlready
+          setupFullPageMediumUp()
+          fullPageSetupAlready = true
 
     exit: ->
       $('main').fadeIn(0)
