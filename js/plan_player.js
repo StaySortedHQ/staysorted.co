@@ -22,5 +22,4 @@ var instantiatePlan = function() {
 
 // $(document).ready(function(){
 //   instantiatePlan();
-//   console.log("LALA");
 // });
