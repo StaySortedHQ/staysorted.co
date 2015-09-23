@@ -63,6 +63,8 @@ setupFullPageSmall = ->
     controlArrows: true
     slidesNavigation: false
     paddingTop: '25%'
+    afterRender: ->
+      console.log 'after render'
     afterResize: ->
       # Reload on resizing
       location.reload(false)
@@ -78,12 +80,14 @@ setupFullPageMediumUp = ->
     fitToSectionDelay: 9999999
     paddingTop: '50px'
     fixedElements: '.phone'
+    afterRender: ->
     onLeave: (index, nextIndex, direction) ->
 
       # Stop playing Phosphors
-      player_Plan.stop()
-      player_Adapt.stop()
-      player_Inbox.stop()
+      if player_Plan?
+        player_Plan.stop()
+        player_Adapt.stop()
+        player_Inbox.stop()
 
       $('#screen').removeClass()
       $('.down-arrow').removeClass('hide')
@@ -95,8 +99,9 @@ setupFullPageMediumUp = ->
         $('#screen').addClass('two')
 
         # Play Phosphor
-        player_Plan.setCurrentFrameNumber(0)
-        player_Plan.play()
+        if player_Plan?
+          player_Plan.setCurrentFrameNumber(0)
+          player_Plan.play()
 
       else if nextIndex == 3
         $('#screen').addClass('three')
@@ -126,16 +131,20 @@ $ ->
   mediaCheck
     media: '(max-width: 40em)'
     entry: ->
+      instantiateInboxSmall()
       setupFullPageSmall()
-      $.fn.fullpage.destroy('all');
+      $.fn.fullpage.destroy('all')
       setupFullPageSmall()
 
   # CSS Media Query check: Medium Up
   mediaCheck
     media: '(min-width: 40.063em)'
     entry: ->
+      instantiatePlan()
+      instantiateAdapt()
+      instantiateInbox()
       setupFullPageMediumUp()
-      $.fn.fullpage.destroy('all');
+      $.fn.fullpage.destroy('all')
       setupFullPageMediumUp()
 
 

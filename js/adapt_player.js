@@ -19,6 +19,6 @@ var instantiateAdapt = function() {
    document.getElementsByTagName("head")[0].appendChild(jsonpScript);
 }
 
-$(document).ready(function(){
-  instantiateAdapt();
-});
+// $(document).ready(function(){
+//   instantiateAdapt();
+// });

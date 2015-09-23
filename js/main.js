@@ -58,6 +58,9 @@
       controlArrows: true,
       slidesNavigation: false,
       paddingTop: '25%',
+      afterRender: function() {
+        return console.log('after render');
+      },
       afterResize: function() {
         return location.reload(false);
       },
@@ -76,18 +79,23 @@
       fitToSectionDelay: 9999999,
       paddingTop: '50px',
       fixedElements: '.phone',
+      afterRender: function() {},
       onLeave: function(index, nextIndex, direction) {
-        player_Plan.stop();
-        player_Adapt.stop();
-        player_Inbox.stop();
+        if (typeof player_Plan !== "undefined" && player_Plan !== null) {
+          player_Plan.stop();
+          player_Adapt.stop();
+          player_Inbox.stop();
+        }
         $('#screen').removeClass();
         $('.down-arrow').removeClass('hide');
         if (nextIndex === 1) {
           return $('#screen').addClass('one');
         } else if (nextIndex === 2) {
           $('#screen').addClass('two');
-          player_Plan.setCurrentFrameNumber(0);
-          return player_Plan.play();
+          if (typeof player_Plan !== "undefined" && player_Plan !== null) {
+            player_Plan.setCurrentFrameNumber(0);
+            return player_Plan.play();
+          }
         } else if (nextIndex === 3) {
           $('#screen').addClass('three');
           player_Adapt.setCurrentFrameNumber(0);
@@ -111,6 +119,7 @@
     mediaCheck({
       media: '(max-width: 40em)',
       entry: function() {
+        instantiateInboxSmall();
         setupFullPageSmall();
         $.fn.fullpage.destroy('all');
         return setupFullPageSmall();
@@ -119,6 +128,9 @@
     return mediaCheck({
       media: '(min-width: 40.063em)',
       entry: function() {
+        instantiatePlan();
+        instantiateAdapt();
+        instantiateInbox();
         setupFullPageMediumUp();
         $.fn.fullpage.destroy('all');
         return setupFullPageMediumUp();

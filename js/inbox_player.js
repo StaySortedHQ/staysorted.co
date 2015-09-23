@@ -20,6 +20,6 @@ var instantiateInbox = function() {
    document.getElementsByTagName("head")[0].appendChild(jsonpScript);
 }
 
-$(document).ready(function(){
-  instantiateInbox();
-});
+// $(document).ready(function(){
+//   instantiateInbox();
+// });

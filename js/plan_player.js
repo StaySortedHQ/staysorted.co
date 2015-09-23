@@ -20,6 +20,7 @@ var instantiatePlan = function() {
    document.getElementsByTagName("head")[0].appendChild(jsonpScript);
 }
 
-$(document).ready(function(){
-  instantiatePlan();
-});
+// $(document).ready(function(){
+//   instantiatePlan();
+//   console.log("LALA");
+// });
