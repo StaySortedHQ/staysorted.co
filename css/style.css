@@ -628,7 +628,7 @@ canvas {
   .section .small-heading h1 {
     margin-top: -10px; }
 
-  .screenshot {
+  .screenshot, video {
     position: static;
     height: 320px; }
 
