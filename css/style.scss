@@ -141,6 +141,12 @@ a.active {
   background: rgba(255, 255, 255, 0.5);
 }
 
+#fp-nav {
+  a.active {
+    background: transparent;
+  }
+}
+
 ul.nav {
   list-style-type: none;
   margin-right: 20px;
