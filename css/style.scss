@@ -125,15 +125,20 @@ a {
   padding: 0.5em 0em;
   font-size: 1em;
   font-weight: 300;
+  border-radius: 2px;
 }
 
 a:hover, a:active {
-  color: $one;
-  border-radius: 2px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 a:visited {
   color: white;
+}
+
+a.active {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 ul.nav {
@@ -1029,7 +1034,7 @@ canvas {
   }
 }
 
-#about {
+#about, #faq, #contact, #patent {
 
   h1 {
     margin-bottom: 2em;

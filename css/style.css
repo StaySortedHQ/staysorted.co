@@ -79,14 +79,18 @@ a {
   text-decoration: none;
   padding: 0.5em 0em;
   font-size: 1em;
-  font-weight: 300; }
+  font-weight: 300;
+  border-radius: 2px; }
 
 a:hover, a:active {
-  color: #3590fc;
-  border-radius: 2px; }
+  color: white;
+  background: rgba(255, 255, 255, 0.1); }
 
 a:visited {
   color: white; }
+
+a.active {
+  background: rgba(255, 255, 255, 0.5); }
 
 ul.nav {
   list-style-type: none;
@@ -700,15 +704,15 @@ canvas {
     vertical-align: center;
     margin-right: 1em; }
 
-#about h1 {
+#about h1, #faq h1, #contact h1, #patent h1 {
   margin-bottom: 2em; }
-#about .content {
+#about .content, #faq .content, #contact .content, #patent .content {
   padding-top: 160px; }
-#about ol {
+#about ol, #faq ol, #contact ol, #patent ol {
   font-family: 'Comfortaa', cursive;
   font-weight: 300;
   padding: 1em 0; }
-  #about ol li {
+  #about ol li, #faq ol li, #contact ol li, #patent ol li {
     padding: 0.25em; }
 
 /*
