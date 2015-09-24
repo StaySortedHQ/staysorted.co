@@ -115,7 +115,7 @@ handleOrientation = (e) ->
     $('.rotate').fadeIn()
 
 playerInstantiated = false
-fullPageSetupAlready = false
+fullPageInstantiated = false
 
 $ ->
 
@@ -140,12 +140,15 @@ $ ->
           instantiateInbox()
           playerInstantiated = true
 
-        # setup full page if needed
-        if !fullPageSetupAlready
+        if !fullPageInstantiated
           setupFullPageMediumUp()
-          fullPageSetupAlready = true
+          fullPageInstantiated = true
 
     exit: ->
       $('main#main').fadeIn(0)
       $('.rotate').hide()
+
+      if fullPageInstantiated
+        $.fn.fullpage.destroy('all')
+        fullPageInstantiated = false
 

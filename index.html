@@ -30,236 +30,279 @@
 <body>
 
   <main id="main">
-    <header>
-      <div class="row fullWidth">
-        <div class="small-6 medium-6 columns small-text-left">
-          <img src="images/OneReminder.png" alt="OneReminder">
-          <h1>OneReminder</h1>
-        </div>
-        <div class="small-6 medium-6 columns text-right">
-          <ul class="nav show-for-medium-up">
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
 
-    <!-- Email sign up form -->
-    <div id="email-modal">
-      <form class="email-form" method="post" action="http://onereminderemailcollector9863.herokuapp.com/signup">
-        <div class="row">
-          <div class="medium-12 columns text-center">
-            <h1>Join the beta for iOS</h1>
+    <div class="common-content"> <!-- Common Elements Start -->
+
+      <!-- Navigation -->
+      <nav>
+        <div class="row fullWidth">
+          <div class="small-6 medium-6 columns small-text-left">
+            <img src="images/OneReminder.png" alt="OneReminder">
+            <h1>OneReminder</h1>
+          </div>
+          <div class="small-6 medium-6 columns text-right">
+            <ul class="nav show-for-medium-up">
+              <li><a href="about.html">About</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
           </div>
         </div>
-        <div class="row collapse">
-          <div class="medium-9 columns">
-            <input class="email" name="email" type="email" placeholder="your@email.com">
-          </div>
-          <div class="medium-3 columns">
-            <button class="postfix signup" type="submit">Join</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="medium-12 columns">
-            <div class="form-message"></div>
-            <div class="form-error"></div>
-          </div>
-        </div>
-      </form>
-    </div>
+      </nav>
 
-    <div class="phone ignore-touch" id="theme-phone-1">
-      <div class="container hide-for-small-only">
-        <img class="screenshot" src="images/Airbaby.png" alt="">
-        <img src="images/phone2.png" alt="">
-      </div>
-    </div>
-
-    <div class="phone ignore-touch" id="theme-phone-2">
-      <div class="container hide-for-small-only">
-        <img class="screenshot" src="images/Slacker.png" alt="">
-        <img src="images/phone2.png" alt="">
-      </div>
-    </div>
-
-    <div class="phone ignore-touch show-for-medium-up">
-      <div class="container">
-        <img id="primary-phone" src="images/phone2.png" alt="">
-      </div>
-    </div>
-
-    <div id="screen" class="one ignore-touch">
-      <img id="main_screen" class="show-for-medium-up" src="images/Screen.png" alt="OneReminder">
-      <img id="anim_target_Plan" class="show-for-medium-up" src="videos/Plan/Plan.jpg" width="230" height="408"/>
-      <img id="anim_target_Adapt" class="show-for-medium-up" src="videos/Adapt/Adapt.jpg" width="230" height="408"/>
-      <img id="anim_target_Inbox" class="show-for-medium-up" src="videos/Inbox/Inbox.jpg" width="230" height="408"/>
-      <img id="theme_screen" class="show-for-medium-up" src="images/Screen.png" alt="OneReminder">
-      <img id="notification_screen" class="show-for-medium-up" src="images/notification.png" alt="OneReminder">
-    </div>
-
-    <div id="background" class="one ignore-touch">
-      <img id="checkmark" class="checkmark" src="images/Checkmark.svg" alt="Checkmark">
-      <img id="sun" class="sun" src="images/Sun.svg" alt="Sun">
-      <img id="cloud-1" class="cloud" src="images/Cloud.svg" alt="Cloud">
-      <img id="cloud-2" class="cloud" src="images/Cloud.svg" alt="Cloud">
-      <img id="cloud-3" class="cloud" src="images/Cloud.svg" alt="Cloud">
-      <img id="cloud-4" class="cloud" src="images/Cloud.svg" alt="Cloud">
-    </div>
-
-    <div id="fullpage" class="hide-for-small-only">
-      <div class="section one">
-        <div class="row">
-          <!-- Small phone -->
-          <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
-            <img class="phone-image show-small" src="images/phone2.png" alt="">
-          </div>
-
-          <!-- Medium+ content -->
-          <div class="hide-for-small-only medium-5 columns end">
-            <h1>Task management <br class="show-for-large-up"> fast as a breeze.</h1>
-            <p>OneReminder is a fast, easy way to manage your ever changing tasks and day. Update and manage many tasks at a time with a few simple swipes.</p>
-            <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
-          </div>
-        </div>
-         <!-- Small title -->
-        <div class="small-title row">
-          <div class="small-heading small-12 show-for-small-only small-text-center small-centered columns">
-            <h1>Task management <br> fast as a breeze</h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="section two">
-        <div class="row">
-          <!-- Small phone -->
-          <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
-            <img class="phone-image show-small" src="images/phone2.png" alt="">
-          </div>
-
-          <!-- Medium+ content -->
-          <div class="hide-for-small-only medium-5 columns end">
-            <h1>Plan your day in seconds.</h1>
-            <p>Reorder your schedule. Pinch to spread out your reminders. Tap calendar to postpone tasks to another day. Fast and distraction free.</p>
-            <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
-          </div>
-        </div>
-        <!-- Small title -->
-        <div class="small-title row">
-          <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
-            <h1>Plan your day in seconds.</h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="section three">
-
-        <div class="row">
-          <!-- Small phone -->
-          <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
-            <img class="phone-image show-small" src="images/phone2.png" alt="">
-          </div>
-
-          <!-- Medium+ content -->
-          <div class="hide-for-small-only medium-5 columns end">
-            <h1>Adapt quickly to change.</h1>
-            <p>Your day changes. Change with it. Pinch to insert. Swipe to chain select. Ruler to shift reminders earlier or later. Master change like never before.</p>
-            <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
-          </div>
-        </div>
-
-        <!-- Small title -->
-        <div class="small-title row">
-          <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
-            <h1>Adapt quickly to change.</h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="section four">
-        <div class="row">
-
-          <!-- Small phone -->
-          <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
-            <img class="phone-image show-small" src="images/phone2.png" alt="">
-          </div>
-
-          <!-- Medium+ content -->
-          <div class="hide-for-small-only medium-5 columns end">
-            <h1>Clear your mind.</h1>
-            <p>Collect your ideas and tasks in our inbox. Schedule them with a tap. Or move leftover tasks back to organize later.</p>
-            <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
-          </div>
-        </div>
-
-        <!-- Small title -->
-        <div class="small-title row">
-          <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
-            <h1>Clear your mind into the inbox.</h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="section five">
-        <div class="row">
-
-          <!-- Small phone -->
-          <div class="small-12 small-text-center phone-container small-centered medium-uncentered medium-5 medium-offset-1 columns">
-            <div class="phone-image left show-small">
-              <img class="screenshot" src="images/Airbaby.png" alt="">
-              <img class="" src="images/phone2.png" alt="">
+      <!-- Email sign up form -->
+      <div id="email-modal">
+        <form class="email-form" method="post" action="http://onereminderemailcollector9863.herokuapp.com/signup">
+          <div class="row">
+            <div class="medium-12 columns text-center">
+              <h1>Join the beta for iOS</h1>
             </div>
-            <div class="phone-image right show-small">
-              <img class="screenshot" src="images/Slacker.png" alt="">
-              <img class="" src="images/phone2.png" alt="">
+          </div>
+          <div class="row collapse">
+            <div class="medium-9 columns">
+              <input class="email" name="email" type="email" placeholder="your@email.com">
             </div>
-            <img class="phone-image show-small" src="images/phone2.png" alt="">
-            <img class="phone-screen show-small" src="images/Screen.png" alt="">
+            <div class="medium-3 columns">
+              <button class="postfix signup" type="submit">Join</button>
+            </div>
           </div>
-
-          <!-- Medium+ content -->
-          <div class="hide-for-small-only medium-5 columns end">
-            <h1>Get to done in style.</h1>
-            <p>Task managers can be a very personal thing. Get to done faster and in style with OneReminder's colorful themes.</p>
-            <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+          <div class="row">
+            <div class="medium-12 columns">
+              <div class="form-message"></div>
+              <div class="form-error"></div>
+            </div>
           </div>
-        </div>
+        </form>
+      </div> <!-- Common Elements End -->
 
-        <!-- Small title -->
-        <div class="small-title row">
-          <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
-            <h1>Get to done in style with beautiful themes.</h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="section six ">
-        <div class="row">
-
-          <!-- Small phone -->
-          <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
-            <img class="phone-image show-small" src="images/phone2.png" alt="">
-          </div>
-
-          <!-- Medium+ content -->
-          <div class="hide-for-small-only medium-5 columns end">
-            <h1>Do more. Manage less.</h1>
-            <p>There's so much more, but don't waste time. Boost your productivity with OneReminder today!</p>
-            <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
-          </div>
-        </div>
-
-        <!-- Small title -->
-        <div class="small-title row">
-          <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
-            <h1>Do more. Manage less. Get OneReminder today.</h1>
-          </div>
-        </div>
+      <!-- Background elements -->
+      <div id="background" class="one ignore-touch">
+        <img id="checkmark" class="checkmark" src="images/Checkmark.svg" alt="Checkmark">
+        <img id="sun" class="sun" src="images/Sun.svg" alt="Sun">
+        <img id="cloud-1" class="cloud" src="images/Cloud.svg" alt="Cloud">
+        <img id="cloud-2" class="cloud" src="images/Cloud.svg" alt="Cloud">
+        <img id="cloud-3" class="cloud" src="images/Cloud.svg" alt="Cloud">
+        <img id="cloud-4" class="cloud" src="images/Cloud.svg" alt="Cloud">
       </div>
     </div>
 
-    <div id="mobile" class="show-for-small-only">
+    <div class="medium-up-content"> <!-- Medium Up Content Start -->
+
+      <!-- Theme phone -->
+      <div class="phone ignore-touch" id="theme-phone-1">
+        <div class="container hide-for-small-only">
+          <img class="screenshot" src="images/Airbaby.png" alt="">
+          <img src="images/phone2.png" alt="">
+        </div>
+      </div>
+
+      <!-- Theme phone -->
+      <div class="phone ignore-touch" id="theme-phone-2">
+        <div class="container hide-for-small-only">
+          <img class="screenshot" src="images/Slacker.png" alt="">
+          <img src="images/phone2.png" alt="">
+        </div>
+      </div>
+
+      <!-- Main phone -->
+      <div class="phone ignore-touch show-for-medium-up">
+        <div class="container">
+          <img id="primary-phone" src="images/phone2.png" alt="">
+        </div>
+      </div>
+
+      <!-- Phone screens -->
+      <div id="screen" class="one ignore-touch">
+        <img id="main_screen" class="show-for-medium-up" src="images/Screen.png" alt="OneReminder">
+        <img id="anim_target_Plan" class="show-for-medium-up" src="videos/Plan/Plan.jpg" width="230" height="408"/>
+        <img id="anim_target_Adapt" class="show-for-medium-up" src="videos/Adapt/Adapt.jpg" width="230" height="408"/>
+        <img id="anim_target_Inbox" class="show-for-medium-up" src="videos/Inbox/Inbox.jpg" width="230" height="408"/>
+        <img id="theme_screen" class="show-for-medium-up" src="images/Screen.png" alt="OneReminder">
+        <img id="notification_screen" class="show-for-medium-up" src="images/notification.png" alt="OneReminder">
+      </div>
+
+      <!-- Full Page Content -->
+      <div id="fullpage" class="hide-for-small-only">
+        <div class="section one">
+          <div class="row">
+            <!-- Small phone -->
+            <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
+              <img class="phone-image show-small" src="images/phone2.png" alt="">
+            </div>
+
+            <!-- Medium+ content -->
+            <div class="hide-for-small-only medium-5 columns end">
+              <h1>Task management <br class="show-for-large-up"> fast as a breeze.</h1>
+              <p>OneReminder is a fast, easy way to manage your ever changing tasks and day. Update and manage many tasks at a time with a few simple swipes.</p>
+              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+            </div>
+          </div>
+           <!-- Small title -->
+          <div class="small-title row">
+            <div class="small-heading small-12 show-for-small-only small-text-center small-centered columns">
+              <h1>Task management <br> fast as a breeze</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="section two">
+          <div class="row">
+            <!-- Small phone -->
+            <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
+              <img class="phone-image show-small" src="images/phone2.png" alt="">
+            </div>
+
+            <!-- Medium+ content -->
+            <div class="hide-for-small-only medium-5 columns end">
+              <h1>Plan your day in seconds.</h1>
+              <p>Reorder your schedule. Pinch to spread out your reminders. Tap calendar to postpone tasks to another day. Fast and distraction free.</p>
+              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+            </div>
+          </div>
+          <!-- Small title -->
+          <div class="small-title row">
+            <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
+              <h1>Plan your day in seconds.</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="section three">
+
+          <div class="row">
+            <!-- Small phone -->
+            <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
+              <img class="phone-image show-small" src="images/phone2.png" alt="">
+            </div>
+
+            <!-- Medium+ content -->
+            <div class="hide-for-small-only medium-5 columns end">
+              <h1>Adapt quickly to change.</h1>
+              <p>Your day changes. Change with it. Pinch to insert. Swipe to chain select. Ruler to shift reminders earlier or later. Master change like never before.</p>
+              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+            </div>
+          </div>
+
+          <!-- Small title -->
+          <div class="small-title row">
+            <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
+              <h1>Adapt quickly to change.</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="section four">
+          <div class="row">
+
+            <!-- Small phone -->
+            <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
+              <img class="phone-image show-small" src="images/phone2.png" alt="">
+            </div>
+
+            <!-- Medium+ content -->
+            <div class="hide-for-small-only medium-5 columns end">
+              <h1>Clear your mind.</h1>
+              <p>Collect your ideas and tasks in our inbox. Schedule them with a tap. Or move leftover tasks back to organize later.</p>
+              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+            </div>
+          </div>
+
+          <!-- Small title -->
+          <div class="small-title row">
+            <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
+              <h1>Clear your mind into the inbox.</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="section five">
+          <div class="row">
+
+            <!-- Small phone -->
+            <div class="small-12 small-text-center phone-container small-centered medium-uncentered medium-5 medium-offset-1 columns">
+              <div class="phone-image left show-small">
+                <img class="screenshot" src="images/Airbaby.png" alt="">
+                <img class="" src="images/phone2.png" alt="">
+              </div>
+              <div class="phone-image right show-small">
+                <img class="screenshot" src="images/Slacker.png" alt="">
+                <img class="" src="images/phone2.png" alt="">
+              </div>
+              <img class="phone-image show-small" src="images/phone2.png" alt="">
+              <img class="phone-screen show-small" src="images/Screen.png" alt="">
+            </div>
+
+            <!-- Medium+ content -->
+            <div class="hide-for-small-only medium-5 columns end">
+              <h1>Get to done in style.</h1>
+              <p>Task managers can be a very personal thing. Get to done faster and in style with OneReminder's colorful themes.</p>
+              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+            </div>
+          </div>
+
+          <!-- Small title -->
+          <div class="small-title row">
+            <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
+              <h1>Get to done in style with beautiful themes.</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="section six ">
+          <div class="row">
+
+            <!-- Small phone -->
+            <div class="small-12 small-text-center small-centered medium-uncentered medium-5 medium-offset-1 columns">
+              <img class="phone-image show-small" src="images/phone2.png" alt="">
+            </div>
+
+            <!-- Medium+ content -->
+            <div class="hide-for-small-only medium-5 columns end">
+              <h1>Do more. Manage less.</h1>
+              <p>There's so much more, but don't waste time. Boost your productivity with OneReminder today!</p>
+              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+            </div>
+          </div>
+
+          <!-- Small title -->
+          <div class="small-title row">
+            <div class="small-heading show-for-small-only small-text-center small-12 small-centered columns">
+              <h1>Do more. Manage less. Get OneReminder today.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="medium-footer show-for-medium-up">
+        <div class="row fullWidth">
+          <div class="small-12 medium-5 columns medium-text-left small-text-center">
+            Crafted with <i class="fa fa-heart red"></i> @<b>MothershipFactory</b>
+          </div>
+          <div class="hide-for-small-only medium-2 columns center">
+            <img class="down-arrow" src="images/down.svg" alt="Scroll Down">
+          </div>
+          <div class="small-12 medium-5 columns medium-text-right small-text-center">
+            <ul class="nav">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="patent.html">Patent</a></li>
+              <li>
+                <a href="https://twitter.com/onereminder" target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/OneReminder/" target="_blank">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    </div> <!-- Medium Up Content End -->
+
+
+    <div class="small-content show-for-small-only"> <!-- Small Content Start -->
       <img class="screenshot center" src="images/Screen.png" alt="">
       <img class="screenshot left" src="images/Airbaby.png" alt="">
       <img class="screenshot right" src="images/Slacker.png" alt="">
@@ -295,43 +338,17 @@
           </div>
         </div>
       </section>
-      <div class="footer">
-        <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="patent.html">Patent</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer2">
-        <ul class="nav">
-          <li>
-            <a href="https://twitter.com/onereminder" target="_blank">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/OneReminder/" target="_blank">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-        </ul>
-        Crafted with <i class="fa fa-heart red"></i> @<b>MothershipFactory</b>
-      </div>
-    </div>
-
-    <footer>
-      <div class="row fullWidth">
-        <div class="small-12 medium-5 columns medium-text-left small-text-center">
-          Crafted with <i class="fa fa-heart red"></i> @<b>MothershipFactory</b>
-        </div>
-        <div class="hide-for-small-only medium-2 columns center">
-          <img class="down-arrow" src="images/down.svg" alt="Scroll Down">
-        </div>
-        <div class="small-12 medium-5 columns medium-text-right small-text-center">
+      <footer>
+        <section class="one">
           <ul class="nav">
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="patent.html">Patent</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </section>
+        <section class="two">
+          <ul class="nav">
             <li>
               <a href="https://twitter.com/onereminder" target="_blank">
                 <i class="fa fa-twitter"></i>
@@ -343,9 +360,14 @@
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-    </footer>
+          Crafted with <i class="fa fa-heart red"></i> @<b>MothershipFactory</b>
+        </section>
+      </footer>
+    </div>
+
+
+
+
   </main>
 
   <div class="rotate">
