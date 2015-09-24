@@ -1047,7 +1047,7 @@ canvas {
   }
 
   .content {
-    padding-top: 160px;
+    padding-top: 80px;
   }
 
   ol {
@@ -1121,7 +1121,12 @@ canvas {
       font-size: 1em;
       font-weight: 300;
     }
+  }
 
+  #about, #faq, #contact, #patent {
+    header {
+      display: block !important;
+    }
   }
 
   .phone-image {

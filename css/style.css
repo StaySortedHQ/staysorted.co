@@ -710,7 +710,7 @@ canvas {
 #about h1, #faq h1, #contact h1, #patent h1 {
   margin-bottom: 2em; }
 #about .content, #faq .content, #contact .content, #patent .content {
-  padding-top: 160px; }
+  padding-top: 80px; }
 #about ol, #faq ol, #contact ol, #patent ol {
   font-family: 'Comfortaa', cursive;
   font-weight: 300;
@@ -765,6 +765,9 @@ canvas {
     header h1 {
       font-size: 1em;
       font-weight: 300; }
+
+  #about header, #faq header, #contact header, #patent header {
+    display: block !important; }
 
   .phone-image {
     width: 200px; }
