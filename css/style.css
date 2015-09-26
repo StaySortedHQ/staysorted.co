@@ -791,6 +791,12 @@ canvas {
   #about ol li, #faq ol li, #contact ol li, #patent ol li {
     padding: 0.25em; }
 
+#faq section {
+  margin-bottom: 5em; }
+#faq h2 {
+  margin-bottom: 1.4em;
+  font-size: 1.6em; }
+
 * {
   margin: 0; }
 
