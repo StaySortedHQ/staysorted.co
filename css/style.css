@@ -783,7 +783,7 @@ canvas {
 #about h1, #faq h1, #contact h1, #patent h1 {
   margin-bottom: 2em; }
 #about .content, #faq .content, #contact .content, #patent .content {
-  padding-top: 80px; }
+  padding-top: 200px; }
 #about ol, #faq ol, #contact ol, #patent ol {
   font-family: 'Comfortaa', cursive;
   font-weight: 300;
@@ -943,6 +943,17 @@ html, body {
     body nav h1 {
       font-size: 1em;
       font-weight: 300; }
+
+  #about h1, #faq h1, #contact h1, #patent h1 {
+    margin-bottom: 2em; }
+  #about .content, #faq .content, #contact .content, #patent .content {
+    padding-top: 120px; }
+  #about ol, #faq ol, #contact ol, #patent ol {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    padding: 1em 0; }
+    #about ol li, #faq ol li, #contact ol li, #patent ol li {
+      padding: 0.25em; }
 
   #theme-phone-1 {
     position: fixed;

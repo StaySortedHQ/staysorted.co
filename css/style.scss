@@ -1136,7 +1136,7 @@ canvas {
   }
 
   .content {
-    padding-top: 80px;
+    padding-top: 200px;
   }
 
   ol {
@@ -1353,6 +1353,26 @@ html, body {
         font-weight: 300;
       }
 
+    }
+  }
+
+  #about, #faq, #contact, #patent {
+
+    h1 {
+      margin-bottom: 2em;
+    }
+
+    .content {
+      padding-top: 120px;
+    }
+
+    ol {
+      font-family: 'Comfortaa', cursive;
+      font-weight: 300;
+      padding: 1em 0;
+      li {
+        padding: 0.25em;
+      }
     }
   }
 
