@@ -1149,7 +1149,7 @@ canvas {
   }
 }
 
-#faq {
+#faq, #contact {
   section {
     margin-bottom: 5em;
   }
@@ -1157,6 +1157,11 @@ canvas {
   h2 {
     margin-bottom: 1.4em;
     font-size: 1.6em;
+  }
+
+  i {
+    font-size: 1.2em;
+    margin-right: 1.4em;
   }
 }
 
