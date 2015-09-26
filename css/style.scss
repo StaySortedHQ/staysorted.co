@@ -216,6 +216,16 @@ p {
   color: rgba(255, 255, 255, 0.9);
 }
 
+blockquote {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  border: 0;
+  padding: 2em;
+}
+
 .red {
   color: $red;
 }
@@ -1155,13 +1165,20 @@ canvas {
   }
 
   h2 {
-    margin-bottom: 1.4em;
-    font-size: 1.6em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
   }
 
   i {
     font-size: 1.2em;
     margin-right: 1.4em;
+  }
+
+  li {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    list-style-type: circle;
+    font-size: 1.1em;
   }
 }
 
