@@ -30,11 +30,19 @@ setupEmailModal = ->
     successField = $(form.find('.form-message'))
     errorField = $(form.find('.form-error'))
 
+    spinner = $(form.find('.loader'))
+    join = $(form.find('.join'))
+    checkmark = $(form.find('.done'))
+
     successField.html('').fadeOut(0)
     errorField.html('').fadeOut(0)
 
     # check if email is valid
     if emailIsValid(email)
+
+      join.hide()
+      checkmark.hide()
+      spinner.fadeIn()
 
       formData = {
         'email' : email
@@ -48,6 +56,9 @@ setupEmailModal = ->
         encode    : true
       }).fail (data) ->
         successField.html('Thank you. You will receive an email soon.').fadeIn()
+        spinner.hide()
+        checkmark.fadeIn()
+
     else
       errorField.html('Please check your email again. Thanks.').fadeIn()
 

@@ -17,16 +17,22 @@
       return e.stopImmediatePropagation();
     });
     return $('.email-form').submit(function(e) {
-      var action, email, errorField, form, formData, successField;
+      var action, checkmark, email, errorField, form, formData, join, spinner, successField;
       e.preventDefault();
       form = $(this);
       action = form.attr('action');
       email = $.trim(form.find('input[name=email]')[0].value);
       successField = $(form.find('.form-message'));
       errorField = $(form.find('.form-error'));
+      spinner = $(form.find('.loader'));
+      join = $(form.find('.join'));
+      checkmark = $(form.find('.done'));
       successField.html('').fadeOut(0);
       errorField.html('').fadeOut(0);
       if (emailIsValid(email)) {
+        join.hide();
+        checkmark.hide();
+        spinner.fadeIn();
         formData = {
           'email': email
         };
@@ -37,7 +43,9 @@
           dataType: 'json',
           encode: true
         }).fail(function(data) {
-          return successField.html('Thank you. You will receive an email soon.').fadeIn();
+          successField.html('Thank you. You will receive an email soon.').fadeIn();
+          spinner.hide();
+          return checkmark.fadeIn();
         });
       } else {
         return errorField.html('Please check your email again. Thanks.').fadeIn();
