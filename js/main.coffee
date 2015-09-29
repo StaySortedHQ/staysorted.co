@@ -124,11 +124,11 @@ handleOrientation = (e) ->
   if height < 769
     $('main#main').hide()
     $('.rotate').fadeIn()
-    $('#screen').hide()
+    $('.phone').hide()
   else
     $('main#main').show()
     $('.rotate').fadeIn()
-    $('#screen').show()
+    $('.phone').show()
 
 playerInstantiated = false
 fullPageInstantiated = false
@@ -148,7 +148,7 @@ $ ->
       if window.innerHeight < 769
         $('main#main').hide()
         $('.rotate').fadeIn()
-        $('#screen').hide()
+        $('.phone').hide()
       else
         if !fullPageInstantiated
           setupFullPageMediumUp()
