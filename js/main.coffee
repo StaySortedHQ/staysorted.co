@@ -80,10 +80,10 @@ setupFullPageMediumUp = ->
     onLeave: (index, nextIndex, direction) ->
 
       # Stop playing Phosphors
-      if player_Plan?
-        player_Plan.stop()
-        player_Adapt.stop()
-        player_Inbox.stop()
+      # if player_Plan?
+      #   player_Plan.stop()
+      #   player_Adapt.stop()
+      #   player_Inbox.stop()
 
       $('#screen').removeClass()
       $('.down-arrow').removeClass('hide')
@@ -95,23 +95,23 @@ setupFullPageMediumUp = ->
         $('#screen').addClass('two')
 
         # Play Phosphor
-        if player_Plan?
-          player_Plan.setCurrentFrameNumber(0)
-          player_Plan.play()
+        # if player_Plan?
+        #   player_Plan.setCurrentFrameNumber(0)
+        #   player_Plan.play()
 
       else if nextIndex == 3
         $('#screen').addClass('three')
 
         # Play Phosphor
-        player_Adapt.setCurrentFrameNumber(0)
-        player_Adapt.play()
+        # player_Adapt.setCurrentFrameNumber(0)
+        # player_Adapt.play()
 
       else if nextIndex == 4
         $('#screen').addClass('four')
 
         # Play Phosphor
-        player_Inbox.setCurrentFrameNumber(0)
-        player_Inbox.play()
+        # player_Inbox.setCurrentFrameNumber(0)
+        # player_Inbox.play()
 
       else if nextIndex == 5
         $('#screen').addClass('five')
@@ -145,11 +145,11 @@ $ ->
       else
 
         # Instantiate players if not done so already
-        if !playerInstantiated
-          instantiatePlan()
-          instantiateAdapt()
-          instantiateInbox()
-          playerInstantiated = true
+        # if !playerInstantiated
+          # instantiatePlan()
+          # instantiateAdapt()
+          # instantiateInbox()
+          # playerInstantiated = true
 
         if !fullPageInstantiated
           setupFullPageMediumUp()

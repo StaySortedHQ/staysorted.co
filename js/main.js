@@ -70,29 +70,16 @@
         return $('main#main').fadeIn(1000);
       },
       onLeave: function(index, nextIndex, direction) {
-        if (typeof player_Plan !== "undefined" && player_Plan !== null) {
-          player_Plan.stop();
-          player_Adapt.stop();
-          player_Inbox.stop();
-        }
         $('#screen').removeClass();
         $('.down-arrow').removeClass('hide');
         if (nextIndex === 1) {
           return $('#screen').addClass('one');
         } else if (nextIndex === 2) {
-          $('#screen').addClass('two');
-          if (typeof player_Plan !== "undefined" && player_Plan !== null) {
-            player_Plan.setCurrentFrameNumber(0);
-            return player_Plan.play();
-          }
+          return $('#screen').addClass('two');
         } else if (nextIndex === 3) {
-          $('#screen').addClass('three');
-          player_Adapt.setCurrentFrameNumber(0);
-          return player_Adapt.play();
+          return $('#screen').addClass('three');
         } else if (nextIndex === 4) {
-          $('#screen').addClass('four');
-          player_Inbox.setCurrentFrameNumber(0);
-          return player_Inbox.play();
+          return $('#screen').addClass('four');
         } else if (nextIndex === 5) {
           return $('#screen').addClass('five');
         } else if (nextIndex === 6) {
@@ -125,12 +112,6 @@
           $('main#main').hide();
           return $('.rotate').fadeIn();
         } else {
-          if (!playerInstantiated) {
-            instantiatePlan();
-            instantiateAdapt();
-            instantiateInbox();
-            playerInstantiated = true;
-          }
           if (!fullPageInstantiated) {
             setupFullPageMediumUp();
             return fullPageInstantiated = true;
