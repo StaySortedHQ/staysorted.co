@@ -382,21 +382,18 @@ nav {
 .phone {
   position: fixed;
   z-index: 99;
-  width: 320px;
-  height: 560px;
   left: 50%;
-  margin-left: -330px;
+  margin-left: -340px;
   top: 50%;
-  margin-top: -260px;
+  margin-top: -340px;
 
   .container {
     position: relative;
-    width: 320px;
-    height: 560px;
+    width: 389px;
 
     img {
       position: absolute;
-      width: 316px;
+      width: 100%;
     }
   }
 }
@@ -408,8 +405,6 @@ nav {
 #theme-phone-1 {
   position: fixed;
   z-index: 1;
-  width: 320px;
-  height: 560px;
   left: 50%;
   margin-left: -330px;
   top: 50%;
@@ -446,8 +441,6 @@ nav {
 #theme-phone-2 {
   position: fixed;
   z-index: 1;
-  width: 320px;
-  height: 560px;
   left: 50%;
   margin-left: -330px;
   top: 50%;
@@ -527,12 +520,12 @@ nav {
 
 #screen {
   position: fixed;
-  width: 228px;
-  height: 410px;
+  width: 280px;
+  height: 497px;
   top: 50%;
   left: 50%;
-  margin-top: -190px;
-  margin-left: -306px;
+  margin-top: -256px;
+  margin-left: -310px;
   z-index: 3;
   overflow: hidden;
 
