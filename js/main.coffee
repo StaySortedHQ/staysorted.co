@@ -155,6 +155,8 @@ $ ->
           fullPageInstantiated = false
 
       else
+        $('.rotate').hide()
+
         if !fullPageInstantiated
           setupFullPageMediumUp()
           fullPageInstantiated = true
