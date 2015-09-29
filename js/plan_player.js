@@ -5,8 +5,8 @@ var instantiatePlan = function() {
   player_Plan = new PhosphorPlayer('anim_target_Plan');
   phosphorCallback_Plan = function(data) {
 
-    player_Plan.load_animation({
-      imageArray:["Plan_atlas000.jpg","Plan_atlas001.jpg"],
+     player_Plan.load_animation({
+      imageArray:["Plan_atlas000.png","Plan_atlas001.png"],
       imagePath: player_Plan_path,
       animationData: data,
       loop: true,
@@ -20,6 +20,3 @@ var instantiatePlan = function() {
    document.getElementsByTagName("head")[0].appendChild(jsonpScript);
 }
 
-// $(document).ready(function(){
-//   instantiatePlan();
-// });

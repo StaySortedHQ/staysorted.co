@@ -5,7 +5,7 @@ var instantiateAdapt = function() {
   player_Adapt = new PhosphorPlayer('anim_target_Adapt');
   phosphorCallback_Adapt = function(data) {
     player_Adapt.load_animation({
-      imageArray:["Adapt_atlas000.jpg","Adapt_atlas001.jpg"],
+      imageArray:["Adapt_atlas000.png","Adapt_atlas001.png"],
       imagePath: player_Adapt_path,
       animationData: data,
       loop: true,
