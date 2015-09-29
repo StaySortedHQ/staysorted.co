@@ -96,11 +96,11 @@
     if (height < 769) {
       $('main#main').hide();
       $('.rotate').fadeIn();
-      return $('#main_screen').hide();
+      return $('#primary-phone').hide();
     } else {
       $('main#main').show();
       $('.rotate').fadeOut();
-      return $('#main_screen').show();
+      return $('#primary-phone').show();
     }
   };
 
@@ -117,7 +117,7 @@
         if (window.innerHeight < 769) {
           $('main#main').hide();
           $('.rotate').fadeIn();
-          $('#main_screen').hide();
+          $('#primary-phone').hide();
           if (fullPageInstantiated) {
             $.fn.fullpage.destroy('all');
             return fullPageInstantiated = false;
