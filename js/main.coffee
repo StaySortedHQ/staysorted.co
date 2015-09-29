@@ -127,7 +127,7 @@ handleOrientation = (e) ->
     $('#main_screen').hide()
   else
     $('main#main').show()
-    $('.rotate').fadeIn()
+    $('.rotate').fadeOut()
     $('#main_screen').show()
 
 playerInstantiated = false

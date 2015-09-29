@@ -99,7 +99,7 @@
       return $('#main_screen').hide();
     } else {
       $('main#main').show();
-      $('.rotate').fadeIn();
+      $('.rotate').fadeOut();
       return $('#main_screen').show();
     }
   };
