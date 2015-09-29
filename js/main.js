@@ -96,11 +96,11 @@
     if (height < 769) {
       $('main#main').hide();
       $('.rotate').fadeIn();
-      return $('.phone').hide();
+      return $('#main_screen').hide();
     } else {
       $('main#main').show();
       $('.rotate').fadeIn();
-      return $('.phone').show();
+      return $('#main_screen').show();
     }
   };
 
@@ -117,7 +117,7 @@
         if (window.innerHeight < 769) {
           $('main#main').hide();
           $('.rotate').fadeIn();
-          return $('.phone').hide();
+          return $('#main_screen').hide();
         } else {
           if (!fullPageInstantiated) {
             setupFullPageMediumUp();
