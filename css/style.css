@@ -299,9 +299,9 @@ nav {
   position: fixed;
   z-index: 1;
   left: 50%;
-  margin-left: -330px;
+  margin-left: -360px;
   top: 50%;
-  margin-top: -260px; }
+  margin-top: -320px; }
   #theme-phone-1 .container {
     transition: 0.5s ease-in-out;
     opacity: 0;
@@ -309,9 +309,9 @@ nav {
     #theme-phone-1 .container img {
       position: absolute; }
     #theme-phone-1 .container .screenshot {
-      top: 71px;
-      left: 25px;
-      width: 232px; }
+      top: 85px;
+      left: 28px;
+      width: 280px; }
 
 .fp-viewing-4 #theme-phone-1 .container {
   opacity: 1;
@@ -323,18 +323,18 @@ nav {
   position: fixed;
   z-index: 1;
   left: 50%;
-  margin-left: -330px;
+  margin-left: -350px;
   top: 50%;
-  margin-top: -260px; }
+  margin-top: -320px; }
   #theme-phone-2 .container {
     transition: 0.5s ease-in-out;
     opacity: 0; }
     #theme-phone-2 .container img {
       position: absolute; }
     #theme-phone-2 .container .screenshot {
-      top: 71px;
-      left: 25px;
-      width: 232px; }
+      top: 85px;
+      left: 28px;
+      width: 280px; }
 
 .fp-viewing-4 #theme-phone-2 .container {
   opacity: 1;
@@ -375,6 +375,7 @@ nav {
   z-index: -1; }
 
 #screen {
+  transition: 0.5s ease-in-out;
   position: fixed;
   width: 280px;
   height: 497px;
@@ -971,15 +972,16 @@ html, body {
     #about ol li, #faq ol li, #contact ol li, #patent ol li {
       padding: 0.25em; }
 
+  #primary-phone {
+    transition: 0.5s ease-in-out; }
+
   #theme-phone-1 {
     position: fixed;
     z-index: 1;
-    width: 320px;
-    height: 560px;
     left: 50%;
-    margin-left: -330px;
+    margin-left: -360px;
     top: 50%;
-    margin-top: -260px; }
+    margin-top: -340px; }
     #theme-phone-1 .container {
       transition: 0.5s ease-in-out;
       opacity: 0;
@@ -987,15 +989,9 @@ html, body {
       #theme-phone-1 .container img {
         position: absolute; }
       #theme-phone-1 .container .screenshot {
-        top: 71px;
-        left: 25px;
-        width: 232px; }
-
-  .fp-viewing-4 #theme-phone-1 .container {
-    opacity: 1;
-    -ms-transform: translate(80px, 30px) scale(0.8, 0.8);
-    -webkit-transform: translate(80px, 30px) scale(0.8, 0.8);
-    transform: translate(80px, 30px) scale(0.8, 0.8); }
+        top: 85px;
+        left: 30px;
+        width: 280px; }
 
   #theme-phone-2 {
     position: fixed;
@@ -1005,22 +1001,35 @@ html, body {
     left: 50%;
     margin-left: -330px;
     top: 50%;
-    margin-top: -260px; }
+    margin-top: -340px; }
     #theme-phone-2 .container {
       transition: 0.5s ease-in-out;
       opacity: 0; }
       #theme-phone-2 .container img {
         position: absolute; }
       #theme-phone-2 .container .screenshot {
-        top: 71px;
-        left: 25px;
-        width: 232px; }
+        top: 85px;
+        left: 30px;
+        width: 280px; }
 
+  .fp-viewing-4 #primary-phone {
+    -ms-transform: translate(-30px, 0px) scale(0.93, 0.93);
+    -webkit-transform: translate(-30px, 0px) scale(0.93, 0.93);
+    transform: translate(-30px, 0px) scale(0.93, 0.93); }
+  .fp-viewing-4 #screen {
+    -ms-transform: translate(-28px, 2px) scale(0.93, 0.93);
+    -webkit-transform: translate(-28px, 2px) scale(0.93, 0.93);
+    transform: translate(-28px, 2px) scale(0.93, 0.93); }
+  .fp-viewing-4 #theme-phone-1 .container {
+    opacity: 1;
+    -ms-transform: translate(60px, 70px) scale(0.8, 0.8);
+    -webkit-transform: translate(60px, 70px) scale(0.8, 0.8);
+    transform: translate(60px, 70px) scale(0.8, 0.8); }
   .fp-viewing-4 #theme-phone-2 .container {
     opacity: 1;
-    -ms-transform: translate(-80px, 30px) scale(0.8, 0.8);
-    -webkit-transform: translate(-80px, 30px) scale(0.8, 0.8);
-    transform: translate(-80px, 30px) scale(0.8, 0.8); }
+    -ms-transform: translate(-120px, 70px) scale(0.8, 0.8);
+    -webkit-transform: translate(-120px, 70px) scale(0.8, 0.8);
+    transform: translate(-120px, 70px) scale(0.8, 0.8); }
 
   footer {
     left: 8px !important;
