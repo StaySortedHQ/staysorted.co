@@ -134,23 +134,16 @@ $ ->
 
   setupEmailModal()
 
+
   # CSS Media Query check: Medium Up
   mediaCheck
     media: '(min-width: 40.063em)'
     entry: ->
 
-      if window.innerHeight < 480
+      if window.innerHeight < 769
         $('main#main').hide()
         $('.rotate').fadeIn()
       else
-
-        # Instantiate players if not done so already
-        # if !playerInstantiated
-          # instantiatePlan()
-          # instantiateAdapt()
-          # instantiateInbox()
-          # playerInstantiated = true
-
         if !fullPageInstantiated
           setupFullPageMediumUp()
           fullPageInstantiated = true

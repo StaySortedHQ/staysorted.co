@@ -108,7 +108,7 @@
     return mediaCheck({
       media: '(min-width: 40.063em)',
       entry: function() {
-        if (window.innerHeight < 480) {
+        if (window.innerHeight < 769) {
           $('main#main').hide();
           return $('.rotate').fadeIn();
         } else {
