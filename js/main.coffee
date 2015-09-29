@@ -149,6 +149,11 @@ $ ->
         $('main#main').hide()
         $('.rotate').fadeIn()
         $('#main_screen').hide()
+
+        if fullPageInstantiated
+          $.fn.fullpage.destroy('all')
+          fullPageInstantiated = false
+
       else
         if !fullPageInstantiated
           setupFullPageMediumUp()

@@ -117,7 +117,11 @@
         if (window.innerHeight < 769) {
           $('main#main').hide();
           $('.rotate').fadeIn();
-          return $('#main_screen').hide();
+          $('#main_screen').hide();
+          if (fullPageInstantiated) {
+            $.fn.fullpage.destroy('all');
+            return fullPageInstantiated = false;
+          }
         } else {
           if (!fullPageInstantiated) {
             setupFullPageMediumUp();
