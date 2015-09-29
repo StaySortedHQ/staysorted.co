@@ -93,9 +93,14 @@
   handleOrientation = function(e) {
     var height;
     height = window.innerHeight;
-    if (height < 480) {
+    if (height < 769) {
       $('main#main').hide();
-      return $('.rotate').fadeIn();
+      $('.rotate').fadeIn();
+      return $('#screen').hide();
+    } else {
+      $('main#main').show();
+      $('.rotate').fadeIn();
+      return $('#screen').show();
     }
   };
 
@@ -104,13 +109,15 @@
   fullPageInstantiated = false;
 
   $(function() {
+    window.addEventListener('deviceorientation', handleOrientation, true);
     setupEmailModal();
     return mediaCheck({
       media: '(min-width: 40.063em)',
       entry: function() {
         if (window.innerHeight < 769) {
           $('main#main').hide();
-          return $('.rotate').fadeIn();
+          $('.rotate').fadeIn();
+          return $('#screen').hide();
         } else {
           if (!fullPageInstantiated) {
             setupFullPageMediumUp();

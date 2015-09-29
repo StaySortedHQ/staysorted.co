@@ -121,16 +121,21 @@ setupFullPageMediumUp = ->
 
 handleOrientation = (e) ->
   height = window.innerHeight
-  if height < 480
+  if height < 769
     $('main#main').hide()
     $('.rotate').fadeIn()
+    $('#screen').hide()
+  else
+    $('main#main').show()
+    $('.rotate').fadeIn()
+    $('#screen').show()
 
 playerInstantiated = false
 fullPageInstantiated = false
 
 $ ->
 
-  # window.addEventListener('deviceorientation', handleOrientation, true)
+  window.addEventListener('deviceorientation', handleOrientation, true)
 
   setupEmailModal()
 
@@ -143,6 +148,7 @@ $ ->
       if window.innerHeight < 769
         $('main#main').hide()
         $('.rotate').fadeIn()
+        $('#screen').hide()
       else
         if !fullPageInstantiated
           setupFullPageMediumUp()
