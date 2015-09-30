@@ -119,26 +119,30 @@ setupFullPageMediumUp = ->
         $('#screen').addClass('six')
         $('.down-arrow').addClass('hide')
 
+showRotateDevice = ->
+  $('main#main').hide()
+  $('.rotate').fadeIn()
+  $('#primary-phone').hide()
+
+showSite = ->
+  $('main#main').show()
+  $('.rotate').fadeOut()
+  $('#primary-phone').show()
+
 handleOrientation = (e) ->
-  height = window.innerHeight
-  if height < 769
-    $('main#main').hide()
-    $('.rotate').fadeIn()
-    $('#primary-phone').hide()
+  if window.orientation == 0 # Portrait
+    showSite()
   else
-    $('main#main').show()
-    $('.rotate').fadeOut()
-    $('#primary-phone').show()
+    showRotateDevice()
 
 playerInstantiated = false
 fullPageInstantiated = false
 
 $ ->
 
-  window.addEventListener('deviceorientation', handleOrientation, true)
+  $(window).on('orientationchange', handleOrientation)
 
   setupEmailModal()
-
 
   # CSS Media Query check: Medium Up
   mediaCheck
