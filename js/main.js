@@ -116,6 +116,9 @@
 
   $(function() {
     $(window).on('orientationchange', handleOrientation);
+    $('#smallVideoButton').on('click', function() {
+      return $('#smallVideo').fadeIn();
+    });
     setupEmailModal();
     return mediaCheck({
       media: '(min-width: 40.063em)',

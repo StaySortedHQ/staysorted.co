@@ -140,6 +140,19 @@ $red: #F55;
 
 /* Global */
 
+#smallVideo {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 body {
   transition: background-color 0.5s ease;
   font-family: 'Lato', sans-serif;

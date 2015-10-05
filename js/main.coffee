@@ -142,6 +142,10 @@ $ ->
 
   $(window).on('orientationchange', handleOrientation)
 
+  $('#smallVideoButton').on 'click', ->
+    $('#smallVideo').fadeIn()
+
+
   setupEmailModal()
 
   # CSS Media Query check: Medium Up
