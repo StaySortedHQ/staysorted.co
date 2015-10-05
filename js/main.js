@@ -122,6 +122,10 @@
     $('#smallVideo video').on('ended', function(e) {
       return $('#smallVideo').fadeOut();
     });
+    $('video').get(0).addEventListener('webkitendfullscreen', function(e) {
+      $(this).get(0).stop();
+      return $('#smallVideo').fadeOut;
+    });
     $('#smallVideoButton').on('click', function(e) {
       $('#smallVideo').fadeIn();
       $('#smallVideo video').get(0).play();
