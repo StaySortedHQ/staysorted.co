@@ -142,8 +142,18 @@ $ ->
 
   $(window).on('orientationchange', handleOrientation)
 
-  $('#smallVideoButton').on 'click', ->
+  $('#smallVideo video').on 'stop', (e) ->
+    $('#smallVideo').fadeOut()
+
+  $('#smallVideo video').on 'ended', (e) ->
+    $('#smallVideo').fadeOut()
+
+
+  $('#smallVideoButton').on 'click', (e) ->
     $('#smallVideo').fadeIn()
+    $('#smallVideo video').get(0).play()
+
+    e.preventDefault()
 
 
   setupEmailModal()

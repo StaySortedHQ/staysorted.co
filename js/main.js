@@ -116,8 +116,16 @@
 
   $(function() {
     $(window).on('orientationchange', handleOrientation);
-    $('#smallVideoButton').on('click', function() {
-      return $('#smallVideo').fadeIn();
+    $('#smallVideo video').on('stop', function(e) {
+      return $('#smallVideo').fadeOut();
+    });
+    $('#smallVideo video').on('ended', function(e) {
+      return $('#smallVideo').fadeOut();
+    });
+    $('#smallVideoButton').on('click', function(e) {
+      $('#smallVideo').fadeIn();
+      $('#smallVideo video').get(0).play();
+      return e.preventDefault();
     });
     setupEmailModal();
     return mediaCheck({
