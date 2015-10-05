@@ -150,7 +150,7 @@ $ ->
 
   $('video').get(0).addEventListener 'webkitendfullscreen', (e) ->
     $(this).get(0).stop()
-    $('#smallVideo').fadeOut
+    $('#smallVideo').fadeOut()
 
   $('#smallVideoButton').on 'click', (e) ->
     $('#smallVideo').fadeIn()

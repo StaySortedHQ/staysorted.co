@@ -124,7 +124,7 @@
     });
     $('video').get(0).addEventListener('webkitendfullscreen', function(e) {
       $(this).get(0).stop();
-      return $('#smallVideo').fadeOut;
+      return $('#smallVideo').fadeOut();
     });
     $('#smallVideoButton').on('click', function(e) {
       $('#smallVideo').fadeIn();
