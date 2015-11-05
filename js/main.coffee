@@ -166,27 +166,32 @@ $ ->
     media: '(min-width: 40.063em)'
     entry: ->
 
-      if window.innerHeight < 769
-        $('main#main').hide()
-        $('.rotate').fadeIn()
-        $('#primary-phone').hide()
-
-        if fullPageInstantiated
-          $.fn.fullpage.destroy('all')
-          fullPageInstantiated = false
-
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+        if window.innerHeight < 769
+          $('main#main').hide()
+          $('.rotate').fadeIn()
+          $('#primary-phone').hide()
+          if fullPageInstantiated
+            $.fn.fullpage.destroy('all')
+            fullPageInstantiated = false
+        else
+          $('.rotate').hide()
+          if !fullPageInstantiated
+            setupFullPageMediumUp()
+            fullPageInstantiated = true
       else
         $('.rotate').hide()
-
         if !fullPageInstantiated
           setupFullPageMediumUp()
           fullPageInstantiated = true
 
-    exit: ->
-      $('main#main').fadeIn(0)
-      $('.rotate').hide()
 
-      if fullPageInstantiated
-        $.fn.fullpage.destroy('all')
-        fullPageInstantiated = false
+    exit: ->
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+        $('main#main').fadeIn(0)
+        $('.rotate').hide()
+
+        if fullPageInstantiated
+          $.fn.fullpage.destroy('all')
+          fullPageInstantiated = false
 
