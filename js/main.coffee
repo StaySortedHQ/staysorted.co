@@ -79,12 +79,6 @@ setupFullPageMediumUp = ->
       $('main#main').fadeIn(1000)
     onLeave: (index, nextIndex, direction) ->
 
-      # Stop playing Phosphors
-      # if player_Plan?
-      #   player_Plan.stop()
-      #   player_Adapt.stop()
-      #   player_Inbox.stop()
-
       $('#screen').removeClass()
       $('.down-arrow').removeClass('hide')
 
@@ -93,26 +87,10 @@ setupFullPageMediumUp = ->
         $('#screen').addClass('one')
       else if nextIndex == 2
         $('#screen').addClass('two')
-
-        # Play Phosphor
-        # if player_Plan?
-        #   player_Plan.setCurrentFrameNumber(0)
-        #   player_Plan.play()
-
       else if nextIndex == 3
         $('#screen').addClass('three')
-
-        # Play Phosphor
-        # player_Adapt.setCurrentFrameNumber(0)
-        # player_Adapt.play()
-
       else if nextIndex == 4
         $('#screen').addClass('four')
-
-        # Play Phosphor
-        # player_Inbox.setCurrentFrameNumber(0)
-        # player_Inbox.play()
-
       else if nextIndex == 5
         $('#screen').addClass('five')
       else if nextIndex == 6
