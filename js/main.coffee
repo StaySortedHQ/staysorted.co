@@ -98,21 +98,6 @@ setupFullPage = ->
         $('#screen').addClass('six')
         $('.down-arrow').addClass('hide')
 
-showRotateDevice = ->
-  $('.rotate').fadeIn()
-  $('#primary-phone').hide()
-
-showSite = ->
-  $('.rotate').fadeOut()
-  $('#primary-phone').show()
-
-handleOrientation = (e) ->
-  if window.orientation == 0 # Portrait
-    showSite()
-  else
-
-      showRotateDevice()
-
 playerInstantiated = false
 fullPageInstantiated = false
 
