@@ -18,7 +18,7 @@
       return e.stopImmediatePropagation();
     });
     return $('.email-form').submit(function(e) {
-      var action, checkmark, email, errorField, form, formData, join, spinner, successField;
+      var Contact, action, checkmark, contact, email, errorField, form, formData, join, spinner, successField;
       e.preventDefault();
       form = $(this);
       action = form.attr('action');
@@ -37,13 +37,11 @@
         formData = {
           'email': email
         };
-        return $.ajax({
-          type: 'POST',
-          url: action,
-          data: formData,
-          dataType: 'json',
-          encode: true
-        }).fail(function(data) {
+        Contact = Parse.Object.extend("Contact");
+        contact = new Contact();
+        return contact.save({
+          email: email
+        }).then(function(object) {
           successField.html('Thank you. You will receive an email soon.').fadeIn();
           spinner.hide();
           return checkmark.fadeIn();

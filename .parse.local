@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "OneReminderWebsite": {
+      "applicationId": "PJrCjZ1mqVIqBhYwdv2DxMZj8kAqAntfMaYozqRY"
+    },
+    "_default": {
+      "link": "OneReminderWebsite"
+    }
+  }
+}

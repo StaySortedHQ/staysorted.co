@@ -51,13 +51,11 @@ setupEmailModal = ->
         'email' : email
       }
 
-      $.ajax({
-        type      : 'POST'
-        url       : action
-        data      : formData
-        dataType  : 'json'
-        encode    : true
-      }).fail (data) ->
+      Contact = Parse.Object.extend("Contact")
+      contact = new Contact()
+      contact.save({
+        email: email
+      }).then (object) ->
         successField.html('Thank you. You will receive an email soon.').fadeIn()
         spinner.hide()
         checkmark.fadeIn()
