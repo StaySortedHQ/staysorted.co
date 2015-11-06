@@ -224,6 +224,10 @@ a {
   font-weight: 300;
   border-radius: 2px; }
 
+#mediumDevice .join-beta {
+  display: block;
+  margin-top: 1em; }
+
 a:hover:not(.join-beta), a:active {
   color: white;
   background: rgba(255, 255, 255, 0.1); }
