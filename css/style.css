@@ -112,16 +112,25 @@
     transform: translate(0px, 0px) scale(0.8, 0.8) rotate(3deg);
     opacity: 1; } }
 /* Global */
-#smallVideo {
+#promoVideo {
   display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 999;
   background: black; }
-  #smallVideo video {
+  #promoVideo video {
     width: 100%;
     height: 100%; }
+
+.promoVideoButton {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.1em;
+  font-weight: 300; }
+  .promoVideoButton.large {
+    font-size: 1.4em; }
+    .promoVideoButton.large img {
+      width: 50px; }
 
 body {
   transition: background-color 0.5s ease;
@@ -781,18 +790,24 @@ canvas {
 */
 .rotate {
   display: none;
-  position: absolute;
-  text-align: center;
-  width: 300px;
-  height: 2em;
-  left: 50%;
-  margin-left: -150px;
-  top: 50%;
-  margin-top: -1em; }
-  .rotate img {
-    width: 50px;
-    vertical-align: center;
-    margin-right: 1em; }
+  background: #3590fc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999999999999; }
+  .rotate .message {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -120px; }
+    .rotate .message img {
+      width: 40px;
+      margin-right: 10px; }
 
 #about h1, #faq h1, #contact h1, #patent h1 {
   margin-bottom: 2em; }
@@ -1072,3 +1087,6 @@ html, body {
 
   .fp-viewing-5 footer {
     background-color: #29b5d1; } }
+@media only screen and (max-height: 430px) {
+  .rotate.mobile {
+    display: inherit; } }

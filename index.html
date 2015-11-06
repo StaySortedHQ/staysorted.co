@@ -34,7 +34,20 @@
 </head>
 <body>
 
-  <main id="main">
+  <div class="rotate">
+    <div class="message">
+      <img src="images/rotate.svg" alt="Please rotate device">
+      Please rotate your device
+    </div>
+  </div>
+
+  <div id="promoVideo">
+    <video controls>
+      <source src="videos/OneReminderV5-small.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div id="mediumDevice" class="show-for-medium-up">
 
     <div class="common-content"> <!-- Common Elements Start -->
 
@@ -148,7 +161,9 @@
             <div class="hide-for-small-only medium-5 columns end">
               <h1>Task management <br class="show-for-large-up"> fast as a breeze.</h1>
               <p>OneReminder is a fast, easy way to manage your tasks. Schedule many tasks at a time with a few simple swipes.</p>
-              <a href="#" class="join-beta"><img class="appstore" src="images/beta.svg" alt="App Store"></a>
+              <a class="promoVideoButton large" href="#">
+                <img class="play-button" src="images/play.svg" alt="Play video"> Watch the video
+              </a>
             </div>
           </div>
            <!-- Small title -->
@@ -315,24 +330,20 @@
       </footer>
 
     </div> <!-- Medium Up Content End -->
+  </div>
 
-    <div id="smallVideo">
-      <video controls>
-        <source src="videos/OneReminderV5-small.mp4" type="video/mp4">
-      </video>
-    </div>
-
+  <div id="smallDevices">
     <div class="small-content show-for-small-only"> <!-- Small Content Start -->
       <img class="screenshot center" src="images/Screen.png" alt="">
       <img class="screenshot left" src="images/Airbaby.png" alt="">
       <img class="screenshot right" src="images/Slacker.png" alt="">
       <div class="content">
         <h1>Task management <br> fast as a breeze</h1>
-        <h2>
-          <a id="smallVideoButton" href="#">
+        <div>
+          <a class="promoVideoButton" href="#">
             <img class="play-button" src="images/play.svg" alt="Play video"> Watch the video
           </a>
-        </h2>
+        </div>
         <a href="#" class="join-beta"><img class="beta" src="images/beta.svg" alt="Join the beta"></a>
       </div>
       <section>
@@ -390,14 +401,11 @@
     </div>
 
 
-
-
-  </main>
-
-  <div class="rotate">
-    <img src="images/rotate.svg" alt="Please rotate device">
-    Please rotate your device
   </div>
+
+
+
+
 
 
 </body>

@@ -140,7 +140,7 @@ $red: #F55;
 
 /* Global */
 
-#smallVideo {
+#promoVideo {
   display: none;
   position: fixed;
   width: 100%;
@@ -151,6 +151,20 @@ $red: #F55;
   video {
     width: 100%;
     height: 100%;
+  }
+}
+
+.promoVideoButton {
+
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.1em;
+  font-weight: 300;
+
+  &.large {
+    font-size: 1.4em;
+    img {
+      width: 50px;
+    }
   }
 }
 
@@ -1131,19 +1145,27 @@ canvas {
 
 .rotate {
   display: none;
-  position: absolute;
-  text-align: center;
-  width: 300px;
-  height: 2em;
-  left: 50%;
-  margin-left: -150px;
-  top: 50%;
-  margin-top: -1em;
+  background: $one;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999999999999;
 
-  img {
-    width: 50px;
-    vertical-align: center;
-    margin-right: 1em;
+  .message {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -120px;
+
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
   }
 }
 
@@ -1547,3 +1569,8 @@ html, body {
 
 }
 
+@media only screen and (max-height: 430px) {
+  .rotate.mobile {
+    display: inherit;
+  }
+}

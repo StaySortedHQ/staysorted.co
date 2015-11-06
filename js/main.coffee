@@ -68,8 +68,8 @@ emailIsValid = (email) ->
   emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)
   return emailReg.test email
 
-setupFullPageMediumUp = ->
-  $('main#main').hide()
+setupFullPage = ->
+  $('mediumDevice').hide()
 
   $('#fullpage').fullpage
     navigation: true
@@ -77,7 +77,7 @@ setupFullPageMediumUp = ->
     paddingTop: '50px'
     fixedElements: '.phone'
     afterRender: ->
-      $('main#main').fadeIn(1000)
+      $('mediumDevice').fadeIn(1000)
     onLeave: (index, nextIndex, direction) ->
 
       $('#screen').removeClass()
@@ -99,12 +99,10 @@ setupFullPageMediumUp = ->
         $('.down-arrow').addClass('hide')
 
 showRotateDevice = ->
-  $('main#main').hide()
   $('.rotate').fadeIn()
   $('#primary-phone').hide()
 
 showSite = ->
-  $('main#main').show()
   $('.rotate').fadeOut()
   $('#primary-phone').show()
 
@@ -112,31 +110,39 @@ handleOrientation = (e) ->
   if window.orientation == 0 # Portrait
     showSite()
   else
-    showRotateDevice()
+
+      showRotateDevice()
 
 playerInstantiated = false
 fullPageInstantiated = false
 
 $ ->
 
+  # Mark .rotate class with an additional class of mobile for use
+  # with max-height media query
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    $('.rotate').addClass('mobile')
+
   $(window).on('orientationchange', handleOrientation)
 
-  $('#smallVideo video').on 'stop', (e) ->
-    $('#smallVideo').fadeOut()
+  $('#promoVideo video').on 'stop', (e) ->
+    $('#promoVideo').fadeOut()
 
-  $('#smallVideo video').on 'ended', (e) ->
-    $('#smallVideo').fadeOut()
+  $('#promoVideo video').on 'ended', (e) ->
+    $('#promoVideo').fadeOut()
 
   $('video').get(0).addEventListener 'webkitendfullscreen', (e) ->
     $(this).get(0).stop()
-    $('#smallVideo').fadeOut()
+    $('#promoVideo').fadeOut()
 
-  $('#smallVideoButton').on 'click', (e) ->
-    $('#smallVideo').fadeIn()
-    $('#smallVideo video').get(0).play()
-
+  $('.promoVideoButton').on 'click', (e) ->
+    $('#promoVideo').fadeIn()
+    $('#promoVideo video').get(0).play()
     e.preventDefault()
 
+  $('#promoVideo').on 'click', (e) ->
+    $('#promoVideo').fadeOut()
+    $('#promoVideo video').get(0).pause()
 
   setupEmailModal()
 
@@ -144,33 +150,12 @@ $ ->
   mediaCheck
     media: '(min-width: 40.063em)'
     entry: ->
-
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-        if window.innerHeight < 769
-          $('main#main').hide()
-          $('.rotate').fadeIn()
-          $('#primary-phone').hide()
-          if fullPageInstantiated
-            $.fn.fullpage.destroy('all')
-            fullPageInstantiated = false
-        else
-          $('.rotate').hide()
-          if !fullPageInstantiated
-            setupFullPageMediumUp()
-            fullPageInstantiated = true
-      else
-        $('.rotate').hide()
-        if !fullPageInstantiated
-          setupFullPageMediumUp()
-          fullPageInstantiated = true
-
+      if !fullPageInstantiated
+        setupFullPage()
+        fullPageInstantiated = true
 
     exit: ->
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-        $('main#main').fadeIn(0)
-        $('.rotate').hide()
-
-        if fullPageInstantiated
-          $.fn.fullpage.destroy('all')
-          fullPageInstantiated = false
+      if fullPageInstantiated
+        $.fn.fullpage.destroy('all')
+        fullPageInstantiated = false
 
