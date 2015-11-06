@@ -3,6 +3,7 @@
   var emailIsValid, fullPageInstantiated, handleOrientation, playerInstantiated, setupEmailModal, setupFullPageMediumUp, showRotateDevice, showSite;
 
   setupEmailModal = function() {
+    Parse.initialize("PJrCjZ1mqVIqBhYwdv2DxMZj8kAqAntfMaYozqRY", "sUQonoF8Y2O3YFtuweJ8V0uaPwS4sbDKsSAtQK9R");
     $('#email-modal').on('click', function(e) {
       return $(this).fadeOut();
     });

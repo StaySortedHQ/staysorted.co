@@ -1,4 +1,7 @@
 setupEmailModal = ->
+
+  Parse.initialize("PJrCjZ1mqVIqBhYwdv2DxMZj8kAqAntfMaYozqRY", "sUQonoF8Y2O3YFtuweJ8V0uaPwS4sbDKsSAtQK9R")
+
   # Hide email modal on clicking background
   $('#email-modal').on 'click', (e) ->
     $(@).fadeOut()
