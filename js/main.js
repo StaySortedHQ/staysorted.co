@@ -114,6 +114,11 @@
   $(function() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       $('.rotate').addClass('mobile');
+    } else {
+      $('#promoVideo').on('click', function(e) {
+        $('#promoVideo').fadeOut();
+        return $('#promoVideo video').get(0).pause();
+      });
     }
     $(window).on('orientationchange', handleOrientation);
     $('#promoVideo video').on('stop', function(e) {
@@ -130,10 +135,6 @@
       $('#promoVideo').fadeIn();
       $('#promoVideo video').get(0).play();
       return e.preventDefault();
-    });
-    $('#promoVideo').on('click', function(e) {
-      $('#promoVideo').fadeOut();
-      return $('#promoVideo video').get(0).pause();
     });
     setupEmailModal();
     return mediaCheck({

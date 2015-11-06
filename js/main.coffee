@@ -122,6 +122,10 @@ $ ->
   # with max-height media query
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     $('.rotate').addClass('mobile')
+  else
+    $('#promoVideo').on 'click', (e) ->
+      $('#promoVideo').fadeOut()
+      $('#promoVideo video').get(0).pause()
 
   $(window).on('orientationchange', handleOrientation)
 
@@ -139,10 +143,6 @@ $ ->
     $('#promoVideo').fadeIn()
     $('#promoVideo video').get(0).play()
     e.preventDefault()
-
-  $('#promoVideo').on 'click', (e) ->
-    $('#promoVideo').fadeOut()
-    $('#promoVideo video').get(0).pause()
 
   setupEmailModal()
 
