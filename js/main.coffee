@@ -112,8 +112,6 @@ $ ->
       $('#promoVideo').fadeOut()
       $('#promoVideo video').get(0).pause()
 
-  $(window).on('orientationchange', handleOrientation)
-
   $('#promoVideo video').on 'stop', (e) ->
     $('#promoVideo').fadeOut()
 

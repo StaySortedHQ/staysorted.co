@@ -102,7 +102,6 @@
         return $('#promoVideo video').get(0).pause();
       });
     }
-    $(window).on('orientationchange', handleOrientation);
     $('#promoVideo video').on('stop', function(e) {
       return $('#promoVideo').fadeOut();
     });
