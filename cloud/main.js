@@ -30,7 +30,7 @@
       to: email,
       from: "beta@onereminder.co",
       subject: "Thank you for joining OneReminder Beta",
-      text: "You will receive an email from Apple's TestFlight system with your invitation to join OneReminder's beta. \n\nCheers and you're awesome!"
+      text: "You will receive an email from Apple's TestFlight system with your invitation to join OneReminder's beta.\n\nCheers and you're awesome!"
     }, {
       success: function(httpResponse) {
         console.log(httpResponse);
@@ -41,24 +41,6 @@
         console.error(httpResponse);
         console.log(email);
         return console.error("Uh oh, something went wrong");
-      }
-    });
-  });
-
-  Parse.Cloud.define('sendEmail', function(request, response) {
-    return mailgun.sendEmail({
-      to: 'leo@onereminder.co',
-      from: 'leo@onereminder.co',
-      subject: 'Hello World!',
-      text: 'Hello'
-    }, {
-      success: function(httpResponse) {
-        console.log(httpResponse);
-        return response.success('Email sent!');
-      },
-      error: function(httpResponse) {
-        console.log(httpResponse);
-        return response.error('Uh oh, something went wrong');
       }
     });
   });
