@@ -82,7 +82,9 @@
         } else if (nextIndex === 5) {
           return $('#screen').addClass('five');
         } else if (nextIndex === 6) {
-          $('#screen').addClass('six');
+          return $('#screen').addClass('six');
+        } else if (nextIndex === 7) {
+          $('#screen').addClass('seven');
           return $('.down-arrow').addClass('hide');
         }
       }

@@ -96,6 +96,8 @@ setupFullPage = ->
         $('#screen').addClass('five')
       else if nextIndex == 6
         $('#screen').addClass('six')
+      else if nextIndex == 7
+        $('#screen').addClass('seven')
         $('.down-arrow').addClass('hide')
 
 playerInstantiated = false
