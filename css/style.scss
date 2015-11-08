@@ -1589,6 +1589,25 @@ html, body {
   }
 
   .fp-viewing-4 {
+    #primary-phone {
+      -ms-transform: translate(-200px, 50px) scale(0.60, 0.60);
+      -webkit-transform: translate(-200px, 50px) scale(0.60, 0.60);
+      transform: translate(-200px, 50px) scale(0.60, 0.60);
+    }
+
+    #screen {
+      -ms-transform: translate(-190px, 61px) scale(0.60, 0.60);
+      -webkit-transform: translate(-190px, 61px) scale(0.60, 0.60);
+      transform: translate(-190px, 61px) scale(0.60, 0.60);
+    }
+
+    #ipad {
+      width: 400px;
+      margin-left: -400px;
+    }
+  }
+
+  .fp-viewing-5 {
 
     #primary-phone {
       -ms-transform: translate(-20px, 0px) scale(0.80, 0.80);
