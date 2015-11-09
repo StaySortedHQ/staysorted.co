@@ -44,6 +44,37 @@
     </video>
   </div>
 
+  <!-- Email sign up form -->
+  <div id="email-modal">
+    <form class="email-form" method="post" action="http://onereminderemailcollector9863.herokuapp.com/signup">
+      <div class="row">
+        <div class="small-12 medium-12 columns text-center">
+          <h1>Join the beta for iOS</h1>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="small-12 medium-9 columns">
+          <input class="email" name="email" type="email" placeholder="your@email.com">
+        </div>
+        <div class="small-0 medium-3 columns">
+          <button class="postfix signup" type="submit">
+            <span class="join">Join</span>
+            <img class="done" src="images/check.svg" alt="Done">
+            <div class="loader">
+              Loading…
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-12 columns">
+          <div class="form-message"></div>
+          <div class="form-error"></div>
+        </div>
+      </div>
+    </form>
+  </div> <!-- Email sign up form End -->
+
   <div id="mediumDevice" class="show-for-medium-up">
 
     <div class="common-content"> <!-- Common Elements Start -->
@@ -63,37 +94,6 @@
           </div>
         </div>
       </nav>
-
-      <!-- Email sign up form -->
-      <div id="email-modal">
-        <form class="email-form" method="post" action="http://onereminderemailcollector9863.herokuapp.com/signup">
-          <div class="row">
-            <div class="medium-12 columns text-center">
-              <h1>Join the beta for iOS</h1>
-            </div>
-          </div>
-          <div class="row collapse">
-            <div class="medium-9 columns">
-              <input class="email" name="email" type="email" placeholder="your@email.com">
-            </div>
-            <div class="medium-3 columns">
-              <button class="postfix signup" type="submit">
-                <span class="join">Join</span>
-                <img class="done" src="images/check.svg" alt="Done">
-                <div class="loader">
-                  Loading…
-                </div>
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="medium-12 columns">
-              <div class="form-message"></div>
-              <div class="form-error"></div>
-            </div>
-          </div>
-        </form>
-      </div> <!-- Common Elements End -->
 
       <!-- Background elements -->
       <div id="background" class="one ignore-touch">
