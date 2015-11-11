@@ -305,7 +305,21 @@ a {
   padding: 0.5em 0em;
   font-size: 1em;
   font-weight: 300;
-  border-radius: 2px;
+  border-radius: 4px;
+
+  &.highlight {
+    background: $red;
+  }
+
+
+}
+
+.small-content {
+  a.highlight {
+    color: white;
+    background: transparent;
+    font-weight: 700;
+  }
 }
 
 #mediumDevice {
@@ -1266,7 +1280,13 @@ canvas {
 #about, #faq, #contact, #patent {
 
   h1 {
-    margin-bottom: 2em;
+    margin-bottom: 1.1em;
+  }
+
+  p {
+    a {
+      text-decoration: underline;
+    }
   }
 
   .content {

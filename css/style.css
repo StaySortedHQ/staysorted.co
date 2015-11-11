@@ -226,7 +226,14 @@ a {
   padding: 0.5em 0em;
   font-size: 1em;
   font-weight: 300;
-  border-radius: 2px; }
+  border-radius: 4px; }
+  a.highlight {
+    background: #ff5555; }
+
+.small-content a.highlight {
+  color: white;
+  background: transparent;
+  font-weight: 700; }
 
 #mediumDevice .join-beta {
   display: block;
@@ -869,7 +876,9 @@ canvas {
       margin-right: 10px; }
 
 #about h1, #faq h1, #contact h1, #patent h1 {
-  margin-bottom: 2em; }
+  margin-bottom: 1.1em; }
+#about p a, #faq p a, #contact p a, #patent p a {
+  text-decoration: underline; }
 #about .content, #faq .content, #contact .content, #patent .content {
   padding-top: 200px; }
 #about ol, #faq ol, #contact ol, #patent ol {
