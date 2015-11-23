@@ -841,8 +841,7 @@ canvas {
       margin: 0; }
     .small-content footer section.one {
       padding-top: 2em;
-      padding-bottom: 2em;
-      background: rgba(255, 255, 255, 0.2) !important; }
+      padding-bottom: 2em; }
       .small-content footer section.one ul {
         margin-bottom: 0; }
     .small-content footer section.two {
@@ -1037,7 +1036,20 @@ html, body {
 
   #cloud-4 {
     top: 240px;
-    right: 60px; } }
+    right: 60px; }
+
+  section {
+    margin: 0 !important; }
+    section.plan {
+      margin-top: 3em !important;
+      background-color: #4498fc; }
+    section.adapt {
+      background-color: #53a1fc; }
+    section.do-more {
+      background-color: #62a9fd; }
+
+  footer .one {
+    background-color: #7bb7fd; } }
 /*
 * Media Query: Medium Screen
 */

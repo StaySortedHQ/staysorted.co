@@ -1232,7 +1232,6 @@ canvas {
     section.one {
       padding-top: 2em;
       padding-bottom: 2em;
-      background: rgba(255, 255, 255, 0.2) !important;
 
       ul {
         margin-bottom: 0;
@@ -1503,6 +1502,29 @@ html, body {
   #cloud-4 {
     top: 240px;
     right: 60px;
+  }
+
+  section {
+    margin: 0 !important;
+
+    &.plan {
+      margin-top: 3em !important;
+      background-color: lighten($one, 3%);
+    }
+
+    &.adapt {
+      background-color: lighten($one, 6%);
+    }
+
+    &.do-more {
+      background-color: lighten($one, 9%);
+    }
+  }
+
+  footer {
+    .one {
+      background-color: lighten($one, 14%);
+    }
   }
 }
 
