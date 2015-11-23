@@ -1504,6 +1504,28 @@ html, body {
     right: 60px;
   }
 
+  #cloud-1-small {
+    position: absolute;
+    width: 120px;
+    left: 0px;
+    top: 130px;
+  }
+
+  #cloud-2-small {
+    position: absolute;
+    width: 120px;
+    right: 50%;
+    margin-right: -80px;
+    top: 30px;
+  }
+
+  #cloud-3-small {
+    position: absolute;
+    width: 120px;
+    right: -2px;
+    top: 110px;
+  }
+
   section {
     margin: 0 !important;
 
