@@ -20,19 +20,3 @@ Parse.Cloud.afterSave "Contact", (request) ->
       console.log email
       console.error "Uh oh, something went wrong"
   })
-
-  mailgun.sendEmail({
-    to: email
-    from: "beta@onereminder.co"
-    subject: "Thank you for joining OneReminder Beta"
-    text: "You will receive an email from Apple's TestFlight system with your invitation to join OneReminder's beta.\n\nCheers and you're awesome!"
-  }, {
-    success: (httpResponse) ->
-      console.log httpResponse
-      console.log email
-      console.log "Email sent successfully"
-    error: (httpResponse) ->
-      console.error httpResponse
-      console.log email
-      console.error "Uh oh, something went wrong"
-  })
