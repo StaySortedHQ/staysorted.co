@@ -19,7 +19,7 @@ $ ->
 
       if count < 0
 
-        window.location.href = "http://staysorted.co"
+        window.location.href = "http://staysorted.com"
 
       else
 
